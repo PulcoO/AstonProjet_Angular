@@ -1,13 +1,17 @@
 /* Navigation*/
 
+::ng-deep .navCss nav {
+    // margin: 0;
+    // padding: 0;
+    background-color: transparent;
+}
+
 .navbar {
-    background-color: #E3FFB8;
     margin: 0;
     padding: 0;
 }
 
-#collapse {
-    margin: 0;
-    padding: 0;
+::ng-deep .collapseCss {
+    color: black;
     background-color: #E3FFB8;
 }
