@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/layout/nav-bar/nav-bar.component';
 import { IndexComponent } from './components/pages/index/index.component';
-
+import { MapComponent } from './components/pages/map/map.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -14,12 +15,14 @@ import { IndexComponent } from './components/pages/index/index.component';
   declarations: [
     AppComponent,
     NavBarComponent,
-    IndexComponent
+    IndexComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
