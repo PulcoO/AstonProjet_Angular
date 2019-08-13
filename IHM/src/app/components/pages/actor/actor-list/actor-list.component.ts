@@ -12,4 +12,22 @@ export class ActorListComponent implements OnInit {
   ngOnInit() {
   }
 
+<<<<<<< Updated upstream
+=======
+  getActor(): void
+  {
+    this.http.get<Actor>('http://localhost:9090/actor')
+    .pipe(map(data => data))
+      .subscribe(
+        (actor: Actor)=>{
+        this.actor = actor;
+        console.log(actor)
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
+  
+>>>>>>> Stashed changes
 }

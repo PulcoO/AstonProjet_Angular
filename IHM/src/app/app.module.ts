@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { AngularWebStorageModule } from 'angular-web-storage'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { ActorDetailComponent } from './components/pages/actor/actor-detail/actor-detail.component';
 import { ActorListComponent } from './components/pages/actor/actor-list/actor-list.component';
 import { RechercheComponent } from './components/pages/recherche/recherche.component';
+import { FavorisComponent } from './components/layout/buttons/favoris/favoris.component';
+
 
 
 
@@ -24,9 +27,12 @@ import { RechercheComponent } from './components/pages/recherche/recherche.compo
     ActorDetailComponent,
     ActorListComponent,
     RechercheComponent,
+    FavorisComponent,
+    
   ],
   imports: [
     BrowserModule,
+    AngularWebStorageModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule
