@@ -1,9 +1,11 @@
+@import "../../../../styles.scss";
+
 /* Navigation*/
 
 ::ng-deep .navCss nav {
     // margin: 0;
     // padding: 0;
-    background-color: rgba(227, 255, 184, 0.8);
+    background-color: $color-green-light;
 }
 
 .navbar {
@@ -13,5 +15,5 @@
 
 ::ng-deep .collapseCss {
     color: black;
-    background-color: #E3FFB8;
+    background-color: $color-green-light;
 }

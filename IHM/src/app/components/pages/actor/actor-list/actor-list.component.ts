@@ -17,12 +17,6 @@ export class ActorListComponent implements OnInit {
   ngOnInit() {
     this.getActor();
   }
-
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> composantActorList
   getActor(): void
   {
     this.http.get<Actor>('http://localhost:9090/actor')
@@ -30,19 +24,11 @@ export class ActorListComponent implements OnInit {
       .subscribe(
         (actor: Actor)=>{
         this.actor = actor;
-<<<<<<< HEAD
         console.log(actor)
-=======
->>>>>>> composantActorList
       },
       err => {
         console.log(err);
       }
     );
   }
-<<<<<<< HEAD
-  
->>>>>>> Stashed changes
-=======
->>>>>>> composantActorList
 }
