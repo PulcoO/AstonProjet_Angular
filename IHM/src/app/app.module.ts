@@ -17,6 +17,7 @@ import { FavorisComponent } from './components/layout/buttons/favoris/favoris.co
 import { ReturnMapComponent } from './components/layout/buttons/return-map/return-map.component';
 import { ReturnListComponent } from './components/layout/buttons/return-list/return-list.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
+import { SidenavMapComponent } from './components/layout/sidenav-map/sidenav-map.component';
 
 
 
@@ -35,6 +36,7 @@ import { FooterComponent } from './components/layout/footer/footer.component';
     ReturnMapComponent,
     ReturnListComponent,
     FooterComponent,
+    SidenavMapComponent,
     
   ],
   imports: [

@@ -1,4 +1,19 @@
-#frugalmap {
-    height: 100vh;
-    width: 100%;
+.containerSidenavMap {
+  height: 100%;
+  width: 100%;
+}
+
+.sidenav {
+  height: auto;
+  width: 20%;
+}
+
+.map {
+  position: absolute;
+  top: 9%;
+  right: 0;
+  bottom: 0;
+  z-index: 1 !important;
+  height: auto;
+  width: 80%;
 }
