@@ -16,6 +16,7 @@ import { RechercheComponent } from './components/pages/recherche/recherche.compo
 import { FavorisComponent } from './components/layout/buttons/favoris/favoris.component';
 import { ReturnMapComponent } from './components/layout/buttons/return-map/return-map.component';
 import { ReturnListComponent } from './components/layout/buttons/return-list/return-list.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
 
 
 
@@ -33,6 +34,7 @@ import { ReturnListComponent } from './components/layout/buttons/return-list/ret
     FavorisComponent,
     ReturnMapComponent,
     ReturnListComponent,
+    FooterComponent,
     
   ],
   imports: [
