@@ -1,52 +1,47 @@
 <!--Navbar-->
-<mdb-navbar SideClass="navbar fixed-top navbar-expand-xl navbar-light intro-fixed-nav" class="navCss" [containerInside]="false">
+<mdb-navbar SideClass="navbar fixed-top navbar-expand-xl navbar-light intro-fixed-nav" class="navCss"
+  [containerInside]="false">
 
-    <!-- Navbar brand -->
-    <mdb-navbar-brand>
-        <a class="navbar-brand" href="#"></a>
-    </mdb-navbar-brand>
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#"> <img src="../../../../assets/home/favicon-32.png" alt=""
+        class="w-90 imgLogo">
+      NomDuProjet</a></mdb-navbar-brand>
 
-    <!-- Collapsible content -->
-    <links>
+  <!-- Collapsible content -->
+  <links>
 
-        <!-- Links -->
+    <!-- Links -->
 
-        <div class="navbar-nav collapseCss">
-            <ul class="navbar-nav collapseUl">
-                <li class="nav-item ">
-                    <a class="font-weight-bold nav-link text-dark active " mdbWavesEffect>Home</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="font-weight-bold nav-link text-dark " mdbWavesEffect>Profil</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="font-weight-bold nav-link text-dark" mdbWavesEffect>Carte</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="font-weight-bold nav-link text-dark" mdbWavesEffect>La liste des acteurs</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="font-weight-bold nav-link text-dark" mdbWavesEffect>Ajout d'un acteur</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="font-weight-bold nav-link text-dark" mdbWavesEffect>Effectuer une recherche</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="font-weight-bold nav-link text-dark" mdbWavesEffect>Events</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="font-weight-bold nav-link text-dark" mdbWavesEffect>Nous concernant</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="font-weight-bold nav-link text-dark" mdbWavesEffect>Charte</a>
-                </li>
-                <li class="nav-item ">
-                    <a class="font-weight-bold nav-link text-dark" mdbWavesEffect>Mentions Légales</a>
-                </li>
-            </ul>
-        </div>
-        <!-- Links -->
-    </links>
-    <!-- Collapsible content -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/map']">
+          <mdb-icon fas icon="map-marker-alt"></mdb-icon>La carte<span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>
+          <mdb-icon fas icon="plus-circle"></mdb-icon>Ajout Acteur
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class=" nav-link text-dark" mdbWavesEffect>
+          <mdb-icon fas icon="list"></mdb-icon>La liste des acteurs
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class=" nav-link text-dark" mdbWavesEffect>
+          <mdb-icon fas icon="search"></mdb-icon>Effectuer une
+          recherche
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class=" nav-link text-dark" mdbWavesEffect>
+          <mdb-icon fas icon="calendar-alt"></mdb-icon> Events
+        </a>
+      </li>
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
 </mdb-navbar>
 <!--/.Navbar-->

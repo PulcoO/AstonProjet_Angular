@@ -3,17 +3,16 @@
 /* Navigation*/
 
 ::ng-deep .navCss nav {
-    // margin: 0;
-    // padding: 0;
-    background-color: $color-green-light;
+  // margin: 0;
+  // padding: 0;
+  background-color: $color-green-light;
+}
+
+.imgLogo {
+  width: 20%;
 }
 
 .navbar {
-    margin: 0;
-    padding: 0;
-}
-
-::ng-deep .collapseCss {
-    color: black;
-    background-color: $color-green-light;
+  margin: 0;
+  padding: 0;
 }
