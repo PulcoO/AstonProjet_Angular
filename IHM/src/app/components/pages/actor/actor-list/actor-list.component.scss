@@ -1,5 +1,7 @@
+@import "../../../../../styles.scss";
+
 body {
-    background-color: rgb(227, 255, 184);
+    background-color: white;
     margin: 0px;
     padding: 0px;
     top: 0px;
@@ -12,4 +14,8 @@ body {
     margin-bottom: 2%;
     margin-right: 15px;
     margin-left: 15px;
+}
+
+.card-header {
+    background-color: $color-green-light;
 }

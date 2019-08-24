@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: IndexComponent},
   { path: 'map', component: MapComponent},
   { path: 'actorList', component: ActorListComponent},
-  { path: 'actorDetail', component: ActorDetailComponent},
+  { path: 'actor/Detail', component: ActorDetailComponent},
 ];
 
 @NgModule({
