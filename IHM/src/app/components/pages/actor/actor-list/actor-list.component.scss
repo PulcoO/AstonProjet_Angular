@@ -1,24 +1,83 @@
 @import "../../../../../styles.scss";
 
 body {
-    background-color: white;
+    background-color: rgba(244, 255, 255, 1);
     margin: 0px;
     padding: 0px;
     top: 0px;
-    height: 100%;
+    height: 100vh;
     width: 100%;
 }
+.card_NgForOf {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 
-.card {
-    top: 120px;
+}
+
+::ng-deep .card {
+    top: 100px;
     margin-bottom: 2%;
     margin-right: 15px;
     margin-left: 15px;
+    max-width: 400px;
+    max-height: 500px;
 }
 
-.card-header {
-    background-color: $color-green-light;
+// .card-header {
+//     //background-color: $color-green-light;
+//     background-image: url("https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg");
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+//     background-size: cover;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-around;
+//}
+.card-body{
+    padding-top: 1.25rem;
+    padding-right: 0.8rem;
+    paddind-left: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.header-top {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.header-bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.categories-names {
+    display: block;
+    background-color: yellowgreen;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 15px;
+    margin:5px;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+.card-footer{
+    display: flex;
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+.buttons_google{
+    -webkit-align-self: center;
+    align-self: center;
+}
+.button-read-more{
+    align-items: flex-end;
 }

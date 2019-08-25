@@ -18,6 +18,7 @@ import { ReturnMapComponent } from './components/layout/buttons/return-map/retur
 import { ReturnListComponent } from './components/layout/buttons/return-list/return-list.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { SidenavMapComponent } from './components/layout/sidenav-map/sidenav-map.component';
+import { ReadMoreComponent } from './components/layout/buttons/read-more/read-more.component';
 
 
 
@@ -37,6 +38,7 @@ import { SidenavMapComponent } from './components/layout/sidenav-map/sidenav-map
     ReturnListComponent,
     FooterComponent,
     SidenavMapComponent,
+    ReadMoreComponent,
     
   ],
   imports: [

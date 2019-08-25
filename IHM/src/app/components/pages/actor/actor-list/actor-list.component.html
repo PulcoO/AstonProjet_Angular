@@ -4,28 +4,60 @@
         <app-return-map></app-return-map>
     </section>
 
-    <section class="card_NgForOf" *ngFor="let actor of actorList;">
-        <div class="card">
-            <div class="card-header">
-                <div class="title">
-                    <h5 class="card-title h5">{{actor.name}}</h5>
-                        <p>{{actor.categories.name}}</p>
-                </div>
-                <div class="header_button">
+    <section class="card_NgForOf" >
+        <!-- Card -->
+    <div class="card"*ngFor="let actor of actors;" >
 
-                </div>
-                
-                <div>
-                    <app-favoris></app-favoris>
-                </div>
-            </div>
-    
-            <div class="card-body">
-                <!-- <p class="card-text">{{actor.categories}}</p> -->
-                <p class="card-text">{{actor.description}}</p>
-            </div>
+        <!-- Card image -->
+        <div class="view overlay">
+          <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+          <a href="#">
+            <div class="mask rgba-white-slight"></div>
+          </a>
         </div>
-    </section>
+        <!-- Card content -->
+        <div class="card-body">
+            <div class="card-header bg-transparent">
+                <div class="header-top">
+                    <div class="title">
+                        <h5 class="card-title h5">{{actor.name}}</h5>
+                    </div>
+                    
+                    <div class="header_button">
+                        <app-favoris></app-favoris>
+                    </div>
+                </div>
+
+                <div class="header-bottom">
+                    <div class="categories" *ngFor="let category of actor.Categories" >
+                        <p class="categories-names">{{ category.name }}</p>
+                    </div>  
+                </div>
+            </div>
+            <div class="content">
+                <p class="card-text">{{actor.description}}</p>
+            </div>      
+
+          <!-- Card footer -->
+            <div class="card-footer text-muted text-center bg-transparent">
+                <div class="buttons_google">
+                    <!-- Facebook -->
+                    <a type="button" class="btn-floating"><i class="fab fa-facebook-f"></i></a>
+                    <!-- Twitter -->
+                    <a type="button" class="btn-floating"><i class="fab fa-twitter"></i></a>
+                    <!-- Google + -->
+                    <a type="button" class="btn-floating"><i class="fab fa-google-plus-g"></i></a>
+                </div>
+                <a href="#!" class="green-text d-flex flex-row-reverse p-2 button-read-more">
+                    <h5 class="waves-effect waves-light">Read more<i class="fas fa-angle-double-right ml-2"></i></h5>
+                </a>
+            </div>
+
+      
+        </div>
+      
+    </div>
+</section>
     
 
     
