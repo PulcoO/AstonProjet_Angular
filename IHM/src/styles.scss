@@ -5,6 +5,13 @@ $color-green-light: rgb(227, 255, 184);
 $color-green-light-with-opacity: rgba(227, 255, 184, 0.8);
 $color-green-dark: #4caf50;
 $color-white: white;
+
+body {
+    margin:0;
+    padding:0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ///                                        TEMPLATE                                        ////
 ///////////////////////////////////////////////////////////////////////////////////////////////

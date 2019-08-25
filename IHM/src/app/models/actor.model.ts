@@ -11,7 +11,8 @@ export interface Actor {
     description:string;
     telephonenumber:number;
     openhours: string;
-    categories: string[];
+    image: string;
+    categories: object;
     created_at: Date;
     updated_at: Date;
 }

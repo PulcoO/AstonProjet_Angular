@@ -1,77 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ActorList</title>
-</head>
-
 <body>
     <section class="navigation-actor">
         <app-return-list></app-return-list>
         <app-return-map></app-return-map>
     </section>
 
+    <section class="card_NgForOf" *ngFor="let actor of actorList;">
+        <div class="card">
+            <div class="card-header">
+                <div class="title">
+                    <h5 class="card-title h5">{{actor.name}}</h5>
+                        <p>{{actor.categories.name}}</p>
+                </div>
+                <div class="header_button">
 
-    <div class="card">
-        <div class="card-header">
-            <h5 class="card-title h5">{{actor.name}}</h5>
-            <div>
-                <app-favoris></app-favoris>
+                </div>
+                
+                <div>
+                    <app-favoris></app-favoris>
+                </div>
+            </div>
+    
+            <div class="card-body">
+                <!-- <p class="card-text">{{actor.categories}}</p> -->
+                <p class="card-text">{{actor.description}}</p>
             </div>
         </div>
+    </section>
+    
 
-        <div class="card-body">
-            <p class="card-text">{{actor.categories}}</p>
-            <p class="card-text">{{actor.description}}</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <h5 class="card-header h5">{{actor.name}}</h5>
-        <div class="card-body">
-            <h5 class="card-title">{{actor.categories}}</h5>
-            <p class="card-text">{{actor.description}}</p>
-        </div>
-    </div>
-    <div class="card">
-        <h5 class="card-header h5">{{actor.name}}</h5>
-        <div class="card-body">
-            <h5 class="card-title">{{actor.categories}}</h5>
-            <p class="card-text">{{actor.description}}</p>
-        </div>
-    </div>
-    <div class="card">
-        <h5 class="card-header h5">{{actor.name}}</h5>
-        <div class="card-body">
-            <h5 class="card-title">{{actor.categories}}</h5>
-            <p class="card-text">{{actor.description}}</p>
-        </div>
-    </div>
-    <div class="card">
-        <h5 class="card-header h5">{{actor.name}}</h5>
-        <div class="card-body">
-            <h5 class="card-title">{{actor.categories}}</h5>
-            <p class="card-text">{{actor.description}}</p>
-        </div>
-    </div>
-    <div class="card">
-        <h5 class="card-header h5">{{actor.name}}</h5>
-        <div class="card-body">
-            <h5 class="card-title">{{actor.categories}}</h5>
-            <p class="card-text">{{actor.description}}</p>
-        </div>
-    </div>
-    <div class="card">
-        <h5 class="card-header h5">{{actor.name}}</h5>
-        <div class="card-body">
-            <h5 class="card-title">{{actor.categories}}</h5>
-            <p class="card-text">{{actor.description}}</p>
-        </div>
-    </div>
+    
 </body>
-
-
-</html>
