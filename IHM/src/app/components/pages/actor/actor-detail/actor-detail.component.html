@@ -1,1 +1,63 @@
-<p>actor-detail works!</p>
+<div class="page">
+        <section class="card_NgForOf" >
+                <!-- Card -->
+            <div class="card" >
+        
+                <!-- Card image -->
+                <div class="view overlay image-container">
+                  <img class="card-img-top" src={{actor.image}} alt="Card image cap">
+                  <div class="title-img">
+                        <h5 class="card-title h5">{{actor.name}}</h5>
+                    </div>
+                  <!-- https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg -->
+                  <a href="#">
+                    <div class="mask rgba-white-slight">}</div>
+                  </a>
+                </div>
+                <!-- Card content -->
+                <div class="card-body">
+                    <div class="card-header bg-transparent">
+                        <div class="header-top">
+                            <div class="title">
+                                <h5 class="card-title h5">{{actor.name}}</h5>
+                            </div>
+                            
+                            <div class="header_button">
+                                <app-favoris></app-favoris>
+                            </div>
+                        </div>
+        
+                        <div class="header-bottom">
+                            <div class="categories" *ngFor="let category of actor.Categories" >
+                                <p class="categories-names">{{ category.name }}</p>
+                            </div>  
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p class="card-text description">{{actor.description}}</p>
+                    </div>      
+        
+                  <!-- Card footer -->
+                    <div class="card-footer text-muted text-center bg-transparent">
+                        <div class="buttons_google text-center">
+                            <!-- Facebook -->
+                            <a type="button" class="btn-floating"><i class="fab fa-facebook-f"></i></a>
+                            <!-- Twitter -->
+                            <a type="button" class="btn-floating"><i class="fab fa-twitter"></i></a>
+                            <!-- Google + -->
+                            <a type="button" class="btn-floating"><i class="fab fa-google-plus-g"></i></a>
+                        </div>
+                        <div class="button-read-more">
+                            <a href="#!" class="green-text d-flex flex-row-reverse p-2 button-read-more">
+                                <h5 class="waves-effect waves-light">Read more<i class="fas fa-angle-double-right ml-2"></i></h5>
+                            </a>
+                        </div>
+                        
+                    </div>
+        
+              
+                </div>
+              
+            </div>
+        </section>
+</div>
