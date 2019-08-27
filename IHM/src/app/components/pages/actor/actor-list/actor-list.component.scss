@@ -14,11 +14,21 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
+}
+.image-container{
+    min-height: 200px;height: 200px;
+    overflow: hidden;
+    border-radius: 2rem 2rem 0 0;
+    padding: 10px 0 0 0;
+}
+.card-img-top {
+    height: 100%;
+    border-radius: 2rem 2rem 0 0;
 }
 
 ::ng-deep .card {
-    top: 100px;
+    border-radius: 2rem;
+    margin-top: 2%;
     margin-bottom: 2%;
     margin-right: 15px;
     margin-left: 15px;
@@ -68,6 +78,10 @@ body {
     margin-bottom: 0;
 }
 
+.description{
+    font-size: 0.8rem;
+}
+
 .card-footer{
     display: flex;
     margin:0;
@@ -81,3 +95,4 @@ body {
 .button-read-more{
     align-items: flex-end;
 }
+

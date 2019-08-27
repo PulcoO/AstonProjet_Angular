@@ -9,8 +9,9 @@
     <div class="card"*ngFor="let actor of actors;" >
 
         <!-- Card image -->
-        <div class="view overlay">
-          <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="Card image cap">
+        <div class="view overlay image-container">
+          <img class="card-img-top" src={{actor.image}} alt="Card image cap">
+          <!-- https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg -->
           <a href="#">
             <div class="mask rgba-white-slight"></div>
           </a>
@@ -35,7 +36,7 @@
                 </div>
             </div>
             <div class="content">
-                <p class="card-text">{{actor.description}}</p>
+                <p class="card-text description">{{actor.description}}</p>
             </div>      
 
           <!-- Card footer -->
