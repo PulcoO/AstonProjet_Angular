@@ -19,6 +19,9 @@ import { ReturnListComponent } from './components/layout/buttons/return-list/ret
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { SidenavMapComponent } from './components/layout/sidenav-map/sidenav-map.component';
 import { ReadMoreComponent } from './components/layout/buttons/read-more/read-more.component';
+import { ProfilComponent } from './components/pages/profil/profil/profil.component';
+import { LoginComponent } from './components/pages/profil/login/login.component';
+import { RegisterComponent } from './components/pages/profil/register/register.component';
 
 
 
@@ -39,6 +42,9 @@ import { ReadMoreComponent } from './components/layout/buttons/read-more/read-mo
     FooterComponent,
     SidenavMapComponent,
     ReadMoreComponent,
+    ProfilComponent,
+    LoginComponent,
+    RegisterComponent,
     
   ],
   imports: [
