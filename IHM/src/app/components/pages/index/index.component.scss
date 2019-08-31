@@ -1,3 +1,4 @@
+@import "../../../../styles.scss";
 .firstView {
   background: url('../../../../assets/home/homeImg.jpg') no-repeat center center;
   background-size: cover;
@@ -7,7 +8,7 @@
 /** section fonctionnalité **/
 .fonctionality {
   background: url('../../../../assets/home/arbre.png') no-repeat;
-  background-size: 50%;
+  background-size: 40%;
   background-position: bottom;
   height: 100vh;
 }
@@ -23,18 +24,21 @@
 }
 
 .logoText1 {
-  font-size: 1.5em;
+  width: 25%;
+  margin: 0 2%;
+  font-size: 1em;
+
 }
 
 .logoText2 {
-  padding-left: 50%;
-  font-size: 1.5em;
+  margin: 0 2%;
+  width: 25%;
+  font-size: 1em;
 }
-
 /** section event à importer **/
 .events {
   height: 100vh;
-  background-color: #4caf50;
+  background-color: $color-green-dark;
 }
 
 /** section icone **/
