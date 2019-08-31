@@ -1,0 +1,91 @@
+@import "../../../../../styles.scss";
+.profile{
+    height: 100vh;
+    background-color: whitesmoke;
+  }
+  
+  /**Card profil**/
+  .cardContainer{
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 5%;
+    width: 95%;
+    height: 85%;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  .cardInfo{
+    margin-right: 5%;
+    height: 100%;
+    width: 40%;
+    border: $color-green-dark 2px solid;
+    background-color: $color-green-dark;
+    border-radius: 40px;
+  }
+  
+  .cardHeader{
+    height: 20%;
+    width: 100%;
+    background-color: $color-green-dark;
+    overflow:visible; 
+  }
+  
+  .imgUser{
+    position: relative;
+    top: 50%;
+    width: 25%;
+    height: auto;
+    border: #fff 8px solid;
+    border-radius:50%;
+    background-color: #fff;
+    z-index: 5;
+  }
+  
+  .cardBody{
+    background-color: #fff;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .userUpdate{
+    margin: 8%;
+    padding: 10px;
+    width: 12%;
+    border-radius: 50%;
+    background-color: $color-green-dark;
+    cursor: pointer;
+  }
+  
+  
+  .rightContent{
+    height: 100%;
+    width: 70%;
+  
+  }
+  
+  /** Favoris**/
+  
+  .favHeader,.actorHeader{
+    background-color: $color-green-dark;
+    border-radius: 10px;
+    margin: 0% 0% 2% 0%;
+  
+  }
+  .icon{
+    width: 4%;
+    margin: 1%
+  }
+  
+  .fav{
+    height: 70%;
+    width: 100%;
+  }
+  
+  .addActor{
+    height: 30%;
+    width: 100%;
+  }
+  

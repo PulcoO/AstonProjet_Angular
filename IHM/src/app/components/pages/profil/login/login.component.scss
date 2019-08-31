@@ -60,7 +60,8 @@ input:focus:not([readonly]) {
 }
 
 ::placeholder {
-text-align: center;
+text-align: left;
+margin-left: 5%;
 opacity: 0.5;
 color: $color-green-dark;
 }
