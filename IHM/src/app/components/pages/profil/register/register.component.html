@@ -1,1 +1,27 @@
-<p>register works!</p>
+<section class="register d-flex justify-content-center align-items-center">
+    <div class="containerForm d-flex justify-content-around align-items-center">
+        <div class="containerImg d-flex justify-content-center align-items-center">
+            <img src="../../../../../assets/profile/user.png" class="imgUser" alt="" />
+        </div>
+
+        <form class="form text-center ">
+
+            <p class="h4 mb-4 pt-5 text-center loginTitle ">S'enregistrer</p>
+
+            <div class="d-flex flex-column align-items-center formInput">
+                <input type="text" id="defaultLoginFormEmail" class="form-control mb-3 mt-5 input" placeholder="Pseudo">
+                <input type="email" id="defaultLoginFormEmail" class="form-control mb-3 mt-3 input"
+                    placeholder="E-mail">
+                <input type="password" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
+                    placeholder="Password">
+                <button class="btn btn-info btn-block my-4 submitBtn" type="submit">Envoyer</button>
+
+                <div class="text-center">
+                    <p>Déjà un compte?
+                        <a [routerLink]="['/login']" class="green-text">Se connecter</a>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
