@@ -4,16 +4,17 @@
             <img src="../../../../../assets/profile/user.png" class="imgUser" alt="" />
         </div>
 
-        <form class="form text-center ">
+        <form class="form text-center " [formGroup]="form" (ngSubmit)="onSave()">
 
             <p class="h4 mb-4 pt-5 text-center loginTitle ">S'enregistrer</p>
 
             <div class="d-flex flex-column align-items-center formInput">
-                <input type="text" id="defaultLoginFormEmail" class="form-control mb-3 mt-5 input" placeholder="Pseudo">
-                <input type="email" id="defaultLoginFormEmail" class="form-control mb-3 mt-3 input"
-                    placeholder="E-mail">
+                <input type="text" id="defaultLoginFormEmail" class="form-control mb-3 mt-5 input" required
+                    formControlName="pseudo" placeholder="Pseudo">
+                <input type="email" id="defaultLoginFormEmail" class="form-control mb-3 mt-3 input" required
+                    formControlName="email" placeholder="E-mail">
                 <input type="password" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
-                    placeholder="Password">
+                    placeholder="Password" required formControlName="password">
                 <button class="btn btn-info btn-block my-4 submitBtn" type="submit">Envoyer</button>
 
                 <div class="text-center">
