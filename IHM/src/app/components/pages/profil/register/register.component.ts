@@ -19,7 +19,8 @@ export class RegisterComponent implements OnInit {
   onSave(): void {
     this.UserService.add(this.form.value).subscribe(
       console.log, console.error
-    )
+    );
+    console.log(this.form.value)
   }
 
 }
