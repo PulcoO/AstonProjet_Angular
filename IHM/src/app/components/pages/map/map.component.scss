@@ -11,11 +11,85 @@
   align-items: center;
 }
 
-.sidenav {
+.sidenav_container {
   height: 100%;
   width: 20%;
   align-self: flex-start;
 }
+
+//hr {
+//   background-color: #fff;
+//   margin: 3% 10% 0 10%;
+//}
+
+.sidenav {
+  padding: 5.5% 0 5.5% 0;
+  height: 100%;
+  width: 100%;
+}
+
+.topSidenav {
+  height: 15%;
+  padding: 1%;
+  border-radius: 0 20px 0 0;
+  background-color: black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+  .searchBar {
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+.formSidenav {
+  background-color: #4caf50;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+  .icone_sideBar{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: space-between;
+    border: solid black 1px;
+  }
+    .icone{
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      margin: 5%;
+      border-bottom: solid black 1px;
+    }
+.checkbox {
+  margin-top: 20%;
+  margin-left: 30%;
+}
+
+img {
+  width: 50%;
+  padding-left: 10%;
+}
+
+.submitButton {
+  margin-top: 15%;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.bottomSidenav {
+  height: 10%;
+  border-radius: 0 0 20px 0;
+  background-color: black;
+}
+
 ::ng-deep .map {
   position: relative !important;
   z-index: 1 !important;

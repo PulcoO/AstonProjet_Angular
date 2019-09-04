@@ -1,7 +1,45 @@
 <!-- <div class="row"></div> -->
 <section class="containerSidenavMap">
-    <div class="sidenav">
-        <app-sidenav-map></app-sidenav-map>
+    <div class="sidenav_container">
+        <!-- Sidebar navigation -->
+        <div id="slide-out" class="side-nav d-flex flex-column justify-content-center align-items-stretch sidenav">
+
+            <div class="topSidenav">
+                <input type="text" placeholder="search" class="searchBar">
+            </div>
+        
+            <form class="formSidenav" (ngSubmit)="editCategoriesSubmit()">
+                <!-- <hr> -->
+                <div class="icone_sideBar">
+                        <div *ngFor="let category of principal_categories" (click)=addCategoryChecked(category.id,category.name,category.checked) (change)="category.checked = !category.checked">{{ category.name }}</div>
+                </div>
+                <div class="icone_sideBar">
+                    <div class="icone" id="{{category.id}}" *ngFor="let category of principal_categories">
+                        <label>
+                            <input type="checkbox" value="{{category.id}}" 
+                                [checked]="category.checked" 
+                                (change)="category.checked = !category.checked" 
+                                />
+                            <span innerHTML="{{category.name}}"></span>
+                        </label>
+                    </div>
+                    
+                </div>
+        
+                <div class="text_sideBar">
+            
+                </div>
+        
+                <div class="button_sideBar">
+                    <button class="submitButton">Submit</button>
+                </div>
+            </form>
+            
+            <div class="bottomSidenav">
+                    
+            </div>
+        </div>
+        <!--/. Sidebar navigation -->
     </div>
     
     <div id="frugalmap" class="map"></div>
