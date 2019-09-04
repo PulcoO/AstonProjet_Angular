@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'map', component: MapComponent },
   { path: 'actorList', component: ActorListComponent },
   { path: 'actor/:actorId', component: ActorDetailComponent },
-  { path: 'profil', component: ProfilComponent },
+  { path: 'profil/:userId', component: ProfilComponent },
   { path: "register", component: RegisterComponent },
   { path: "login", component: LoginComponent },
 ];

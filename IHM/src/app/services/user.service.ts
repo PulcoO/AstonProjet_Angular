@@ -15,9 +15,11 @@ export class UserService {
     return this.http.post<User>("http://localhost:9090/user/create", user)
   }
 
-  getById(id: number) {
-    return this.http.get(`/user/` + id);
+  getById(url) {
+    return this.http.get<User>(url)
   }
+
+
   update(user: User) {
     return this.http.put(`/user/` + user.id, user);
   }

@@ -49,8 +49,9 @@ export class AuthService {
             }
             localStorage.setItem('token', JSON.stringify(userData));
             localStorage.setItem('id', JSON.stringify(userId));
-            this.router.navigateByUrl('/profil');
-            console.log('COUCOU', localStorage.getItem('id'))
+            let id = JSON.parse(localStorage.getItem('id'));
+            // console.log('COUCOU', id.id)
+            this.router.navigateByUrl('/profil/' + id.id);
           }
         })
     }
