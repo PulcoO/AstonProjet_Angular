@@ -26,14 +26,6 @@ export class MapComponent implements OnInit {
   });
   //exemple de marqueur solitaire avec idication de popup
   //L.marker([50.6311634, 3.0599573], {icon: myIcon}).bindPopup('Je suis un Frugal Marqueur').addTo(myfrugalmap).openPopup();
-
-  this.http.get('https://opendata.lillemetropole.fr/api/records/1.0/search/?dataset=bornes-podotactiles').subscribe((data: any) => {
-    console.log(data);
-    
-    data.records.forEach(podotactile => {
-      L.marker([podotactile.geometry.coordinates[1], podotactile.geometry.coordinates[0]], {icon: myIcon}).addTo(myfrugalmap);
-    });
-  });
   this.http.get('http://localhost:9090/actor').subscribe((data: any) => {
     console.log(data)
     data.forEach(actors => {
@@ -41,5 +33,7 @@ export class MapComponent implements OnInit {
     });
   });
   }
+
+  
 
 }

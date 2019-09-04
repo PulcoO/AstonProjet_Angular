@@ -9,6 +9,8 @@ import { NavBarComponent } from './components/layout/nav-bar/nav-bar.component';
 import { IndexComponent } from './components/pages/index/index.component';
 import { MapComponent } from './components/pages/map/map.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { ActorDetailComponent } from './components/pages/actor/actor-detail/actor-detail.component';
 import { ActorListComponent } from './components/pages/actor/actor-list/actor-list.component';
@@ -46,13 +48,17 @@ import { RegisterComponent } from './components/pages/profil/register/register.c
     LoginComponent,
     RegisterComponent,
     
+    
+    
   ],
   imports: [
     BrowserModule,
     AngularWebStorageModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

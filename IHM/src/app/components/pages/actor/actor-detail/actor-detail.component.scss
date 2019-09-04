@@ -126,6 +126,8 @@ a{
   }
   .bulle_section i{
     width: 10%;
+    display: flex;
+    justify-content: start;
   }
   .bulle{
     background-color: whitesmoke;

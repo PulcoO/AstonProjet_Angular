@@ -1,19 +1,26 @@
+@import "../../../../styles.scss";
+
 .containerSidenavMap {
-  height: 100%;
+  position: relative;
+  height: 100vh;
+  padding: 3.8% 0 0 0;
   width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: whitesmoke;
+  align-items: center;
 }
 
 .sidenav {
-  height: auto;
+  height: 100%;
   width: 20%;
+  align-self: flex-start;
 }
-
-.map {
-  position: absolute;
-  top: 9%;
-  right: 0;
-  bottom: 0;
+::ng-deep .map {
+  position: relative !important;
   z-index: 1 !important;
-  height: auto;
+  height: 95%;
   width: 80%;
+  margin: 1%;
+  border-radius: 20px;
 }
