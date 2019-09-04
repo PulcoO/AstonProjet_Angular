@@ -1,7 +1,7 @@
 @import "../../../../../styles.scss";
 
 body {
-    background-color: $color-green-light;
+    background-color: whitesmoke;
     margin: 0px;
     padding: 0px;
     top: 0px;
@@ -99,6 +99,7 @@ body {
     padding:0;
     height: 20%;
     overflow: scroll;
+    scrollbar-width: none;
 }
 
 .description{
