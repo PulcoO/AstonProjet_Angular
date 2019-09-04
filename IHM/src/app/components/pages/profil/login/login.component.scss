@@ -51,11 +51,12 @@ input{
     width: 60%;
     border-radius: 15px;
     border: 1px solid #b7b7b7;
+    color: $color-green-dark
 }
 
 input:focus:not([readonly]) {
     border: 1px solid $color-green-dark;
-    color: #fff;
+    color: $color-green-dark;
     box-shadow: 3px 2px 2px #b7b7b7;
 }
 
