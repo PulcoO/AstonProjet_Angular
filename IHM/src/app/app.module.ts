@@ -11,9 +11,6 @@ import { NavBarComponent } from './components/layout/nav-bar/nav-bar.component';
 import { IndexComponent } from './components/pages/index/index.component';
 import { MapComponent } from './components/pages/map/map.component';
 
-//import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
@@ -61,10 +58,9 @@ import { RegisterComponent } from './components/pages/profil/register/register.c
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
   ],
   providers: [
+    
   ],
   bootstrap: [AppComponent]
 })
