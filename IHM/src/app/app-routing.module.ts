@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'map', component: MapComponent },
   { path: 'actorList', component: ActorListComponent },
   { path: 'actor/:actorId', component: ActorDetailComponent },
-  { path: "profil", component: ProfilComponent },
+  { path: 'profil', component: ProfilComponent },
   { path: "register", component: RegisterComponent },
   { path: "login", component: LoginComponent },
 ];
@@ -23,8 +23,8 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(
     routes,
-    {enableTracing:true} //debugging purposes only
-    )],
+    { enableTracing: true } //debugging purposes only
+  )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
