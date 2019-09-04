@@ -1,20 +1,199 @@
 @import "../../../../../styles.scss";
 
-.page {
-    background-color: $color-green-light;
-    margin: 0;
-    padding: 5%;
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100%;
+a{
+  color: #444444;
 }
-.card_NgForOf {
+
+.actorCard{
+    height: 100vh;
+    background-color: whitesmoke;
+    
+  }
+  
+  /**Card profil**/
+  .cardContainer{
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 5%;
+    width: 95%;
+    height: 85%;
+    background-color: #fff;
+    overflow: hidden;
+  }
+  
+  .cardInfo{
+    margin-right: 5%;
+    height: 100%;
+    width: 40%;
+    border: $color-green-dark 2px solid;
+    background-color: $color-green-dark;
+    border-radius: 40px;
+  }
+  
+  .cardHeader{
+    height: 20%;
+    width: 100%;
+    background-color: $color-green-dark;
+    overflow:visible; 
+  }
+  
+  .imgActor{
+    position: relative;
+    top: 50%;
+    width: 125px;
+    height: 125px;
+    border: #fff 8px solid;
+    border-radius:50%;
+    background-color: #fff;
+    z-index: 5;
+  }
+  
+  .cardBody{
+    background-color: #fff;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .actorUpdate{
+    margin: 8%;
+    padding: 10px;
+    width: 12%;
+    border-radius: 50%;
+    background-color: $color-green-dark;
+    cursor: pointer;
+  }
+  
+  
+  .rightContent{
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+
+  
+  }
+  
+  /** Favoris**/
+  
+  .favHeader,.actorHeader{
+    background-color: $color-green-dark;
+    border-radius: 10px;
+    margin: 0% 0% 0% 0%;
+  }
+  .icon{
+    width: 5%;
+    margin: 1%;
+
+  }
+  
+  .comments_list{
+    height: 70%;
+    width: 100%;
+    margin: 0%;
+    padding: 1px;
+  }
+  
+  .horaires{
+    height: 50%;
+    width: 100%;
+    margin-bottom: 1%;
+    padding: 1px;
+  }
+  .horaires_list{
+      padding: 1%;
+      display: flex;
+      flex-direction: row wrap;
+      justify-content: space-between;
+  }
+  .horaires_list_infos_container{
+    width: 50%;
+  }
+  .horaires_list_infos{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 1%;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1%;
+  }
+  .bulle_section{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  .bulle_section i{
+    width: 10%;
+    display: flex;
+    justify-content: start;
+  }
+  .bulle{
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    margin: 3px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+  }
+  .bulle p{
+    margin: 0%;
+  }
+  .horaires_list_horaires_container{
+    width: 50%;
+    border-left: #F0F0F0 1px solid;
+    
+  }
+  .horaires_list_horaires{
+    margin: 1%;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1%;
+  }
+  .comments_list{
+    height: 50%;
+    padding-bottom: 15px;
+    background-color: $color-green-dark ;
+    border-radius: 10px;
+    display: block;
+    overflow: hidden;
+  }
+  .comments{
+    padding: 1%;
+    scrollbar-width: none;
+    overflow: scroll;
+    height: 70%;
+  }
+  .comment{
+    padding: 1%;
+    margin: 1%;
+    background-color:whitesmoke;
+    border-radius: 1rem;
+  }
+  .comment h6{
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .comment p{
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  
+.cards {
+    background-color: rebeccapurple; 
     width: 100%;
     height: 100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
+
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    border-radius: 2rem;
 }
 .image-container{
     min-height: 200px;height: 400px;
@@ -38,10 +217,10 @@
 ::ng-deep .card {
     border: none;
     border-radius: 2rem;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-right: 10px;
+    margin-left: 10px;
     width: 90%;
     height: 100%;
 
@@ -96,10 +275,11 @@
     margin-bottom: 0;
 }
 .content{
-    margin:0;
-    padding:0;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+    margin:15px;
+    padding:15px;
     height: 20%;
-    overflow: scroll;
 }
 
 .description{

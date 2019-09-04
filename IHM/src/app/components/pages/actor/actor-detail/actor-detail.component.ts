@@ -12,8 +12,9 @@ import {ActivatedRoute} from "@angular/router";
 export class ActorDetailComponent implements OnInit {
   actor: Actor = {} as Actor;
   categories: Category = {} as Category;
+  image;
   constructor(private http: HttpClient,private route: ActivatedRoute) { 
-    this.route.params.subscribe( params => console.log(params) )
+    // this.route.params.subscribe( params => console.log(params) )
     this.route.params.subscribe( params => {
       let actorId = params.actorId;
       let url = 'http://localhost:9090/actor/' + actorId;
@@ -32,6 +33,10 @@ export class ActorDetailComponent implements OnInit {
       .subscribe(
         (data: Actor)=>{
           this.actor = data;
+          this.image = this.actor.image;
+          console.log(this.image);
+          console.log(this.actor)
+          
            //console.log(this.actor)
         },
       err => {

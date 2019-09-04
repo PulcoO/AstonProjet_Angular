@@ -1,14 +1,37 @@
 <!-- Sidebar navigation -->
-<div id="slide-out" class="side-nav d-flex flex-column justify-content-center align-items-stretch fixed sidenav">
+<div id="slide-out" class="side-nav d-flex flex-column justify-content-center align-items-stretch sidenav">
 
-  <div class="topSidenav"></div>
+  <div class="topSidenav">
+      <input type="text" placeholder="search" class="searchBar">
+  </div>
 
-  <form action="#" class="formSidenav">
+  <form class="formSidenav" (ngSubmit)="editCategoriesSubmit()">
+      <!-- <hr> -->
 
-    <input type="text" placeholder="search" class="searchBar">
+    <div class="icone_sideBar">
+      <div class="icone" id="{{category.id}}" *ngFor="let category of principal_categories">
+          <label>
+              <input type="checkbox" value="{{category.id}}" 
+                     [checked]="category.checked" 
+                     (change)="category.checked = !category.checked" 
+                     />
+              <span innerHTML="{{category.name}}"></span>
+          </label>
+      </div>
+      <button href="#" class="submitButton">Submit</button>
+    </div>
+  </form>
 
-    <hr>
+    <div class="text_sideBar">
 
+    </div>
+
+    <div class="button_sideBar">
+      
+    </div>
+  
+  
+  <!-- <form action="#" class="formSidenav">
     <div class="checkbox d-flex flex-column justify-content-center align-items-start">
 
       <div class="d-flex justify-content-center align-items-center">
@@ -27,12 +50,13 @@
         <label for="Jardin-collaboratif"> <img src="../../../../assets/home/icons8-planté-à-la-main-64.png"
             alt=""></label>
       </div>
-
-      <button class="submitButton">Submit</button>
-
     </div>
+  </form> -->
+      
 
-  </form>
+    
+
+  
 
   <div class="bottomSidenav"></div>
 

@@ -1,31 +1,54 @@
+
+//hr {
+//   background-color: #fff;
+//   margin: 3% 10% 0 10%;
+//}
+
 .sidenav {
-  height: 100vh;
+  padding: 5.5% 0 5.5% 0;
+  height: 100%;
+  width: 100%;
 }
 
 .topSidenav {
-  height: 20%;
-  background-color: #fff;
+  height: 15%;
+  padding: 1%;
+  border-radius: 0 20px 0 0;
+  background-color: black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
+  .searchBar {
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+  }
 
 .formSidenav {
   background-color: #4caf50;
   height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
-
-.searchBar {
-  border: none;
-  border-radius: 10px;
-  text-align: center;
-  margin: 15% 15% 10% 15%;
-
-}
-
-hr {
-
-  background-color: #fff;
-  margin: 3% 10% 0 10%;
-}
-
+  .icone_sideBar{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: space-between;
+    border: solid black 1px;
+  }
+    .icone{
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      margin: 5%;
+      border-bottom: solid black 1px;
+    }
 .checkbox {
   margin-top: 20%;
   margin-left: 30%;
@@ -44,6 +67,7 @@ img {
 }
 
 .bottomSidenav {
-  height: 8%;
-  background-color: #fff;
+  height: 10%;
+  border-radius: 0 0 20px 0;
+  background-color: black;
 }
