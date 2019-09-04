@@ -5,12 +5,13 @@
                 <img class="imgUser" src="../../../../assets/profile/myAvatar.png" alt="">
             </div>
             <div class="cardBody">
-                <h4 class="text-center pt-4 mt-5">Pseudo</h4>
+                <h4 class="text-center pt-4 mt-5">{{ this.currentUser.pseudo }}</h4>
                 <div class="userInfo d-flex flex-column align-items-start justify-content-center pl-5 pt-4">
-                    <p>Nom Prénom :</p>
-                    <p>Date de naissance :</p>
-                    <p>Adresse postale :</p>
-                    <p class="mb-4">Adresse Mail :</p>
+                    <p>Nom Prénom : {{ this.currentUser.lastname }} {{ this.currentUser.firstname }} </p>
+                    <p>Date de naissance : {{ this.currentUser.birthdate | date: 'dd/MM/yyyy' }}</p>
+                    <p>Adresse postale :
+                        {{ this.currentUser.adress + ' '+ this.currentUser.cp + ' '+ this.currentUser.city }}</p>
+                    <p class="mb-4">Adresse Mail : {{ this.currentUser.email }}</p>
 
                     <div class="d-flex justify-content-end">
                         <img class="userUpdate" src="../../../../assets/profile/icone_modifuser.png" alt="">
