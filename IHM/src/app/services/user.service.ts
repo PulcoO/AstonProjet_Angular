@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { User } from "../models/user.model";
+import { Favoris } from "../models/favoris.model";
 import { Observable } from "rxjs";
 
 @Injectable({
@@ -17,6 +18,10 @@ export class UserService {
 
   getById(url) {
     return this.http.get<User>(url)
+  }
+
+  getFavoris(urlFav) {
+    return this.http.get<Favoris>(urlFav)
   }
 
 

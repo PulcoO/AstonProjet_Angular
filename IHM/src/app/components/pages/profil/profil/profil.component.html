@@ -6,44 +6,44 @@
             </div>
             <div class="cardBody">
                 <h4 class="text-center pt-4 mt-5">{{ this.currentUser.pseudo }}</h4>
-                <div class="userInfo d-flex flex-column align-items-start justify-content-center pl-5 pt-4">
-                    <p>Nom Prénom : {{ this.currentUser.lastname }} {{ this.currentUser.firstname }} </p>
-                    <p>Date de naissance : {{ this.currentUser.birthdate | date: 'dd/MM/yyyy' }}</p>
-                    <p>Adresse postale :
-                        {{ this.currentUser.adress + ' '+ this.currentUser.cp + ' '+ this.currentUser.city }}</p>
-                    <p class="mb-4">Adresse Mail : {{ this.currentUser.email }}</p>
+                <ul
+                    class="userInfo d-flex flex-column align-items-start justify-content-center pl-4 pt-4 list-group list-group-flush">
+                    <li class="list-group-item">Nom Prénom : {{ this.currentUser.lastname }}
+                        {{ this.currentUser.firstname }} </li>
+                    <li class="list-group-item">Date de naissance :
+                        {{ this.currentUser.birthdate | date: 'dd/MM/yyyy' }}</li>
+                    <li class="list-group-item">Adresse postale :
+                        {{ this.currentUser.adress + ' '+ this.currentUser.cp + ' '+ this.currentUser.city }}</li>
+                    <li class="mb-4" class="list-group-item">Adresse Mail : {{ this.currentUser.email }}</li>
 
                     <div class="d-flex justify-content-end">
-                        <img class="userUpdate" src="../../../../assets/profile/icone_modifuser.png" alt="">
+                        <img class="userUpdate img-fluid" src="../../../../assets/profile/icone_modifuser.png" alt="">
                     </div>
-                </div>
+                </ul>
             </div>
         </div>
 
         <div class="rightContent d-flex flex-column align-items-start justify-content-center ">
 
             <div class="fav">
-                <div class="d-flex justify-content-start align-items-center favHeader">
+                <div class="d-flex justify-content-start align-items-center pl-2 favHeader">
                     <img class="icon" src="../../../../assets/profile/icone_favoris.png" alt="">
-                    <h6>Favoris</h6>
+                    <h6 class="pt-2">Favoris</h6>
                 </div>
                 <div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Cras justo odio</li>
-                        <li class="list-group-item">Dapibus ac facilisis in</li>
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
+                        <li class="list-group-item" *ngFor="let favori of favoris">{{ favori.Actor.name }}
+                        </li>
                     </ul>
                 </div>
             </div>
 
             <div class="addActor">
-                <div class="d-flex justify-content-start align-items-center actorHeader">
+                <div class="d-flex justify-content-start align-items-center pl-2 actorHeader">
                     <img class="icon" src="../../../../assets/profile/icone_ajoutacteur.png" alt="">
-                    <h6>Ajouter un acteur</h6>
+                    <h6 class="pt-2">Ajouter un acteur</h6>
                 </div>
-                <p>En ajoutant de nouveaux vous participez activement au développement de notre bases de
+                <p>En ajoutant de nouveaux acteurs vous participez activement au développement de notre bases de
                     données. C’est
                     en partageant nos bonnes adresses que nous pourrons tous mieux consommer </p>
 
