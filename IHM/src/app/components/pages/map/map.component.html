@@ -1,10 +1,19 @@
-<!-- <div class="row"></div> -->
 <section class="containerSidenavMap">
-    <div class="sidenav">
-        <app-sidenav-map></app-sidenav-map>
+    <div class="sidenav_container">
+        <div id="slide-out" class="side-nav d-flex flex-column justify-content-center align-items-stretch sidenav">
+            <div class="topSidenav">
+                <input type="text" placeholder="search" class="searchBar">
+            </div>
+            <form class="formSidenav" (ngSubmit)="editCategoriesSubmit()">
+                <div class="icone_sideBar">
+                        <div *ngFor="let category of principal_categories" (click)=addCategoryChecked(category.id)>{{ category.name }}</div>
+                </div>
+                <div class="text_sideBar">
+                </div>
+            </form>
+            <div class="bottomSidenav">
+            </div>
+        </div>
     </div>
-    
     <div id="frugalmap" class="map"></div>
-    
-    
 </section>
