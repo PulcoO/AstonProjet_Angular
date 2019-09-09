@@ -1,0 +1,19 @@
+<h2 class="text-center text-white p-5 ">Les événements</h2>
+
+<div class="containerCard" *ngFor="let event of events">
+    <div class="cardTop">
+        <img src="../../../../assets/home/2271746.jpg" class="imgEvent" alt="">
+    </div>
+    <div class="cardBody d-flex flex-column justify-content-between p-3">
+        <div class="d-flex justify-content-between cardFooter">
+            <p> <i class="fas fa-calendar-alt p-2"></i>{{ event.datebegin | date:short }}</p>
+            <p><i class="fas fa-map-marker-alt p-2"></i>{{ event.location }}</p>
+        </div>
+        <h5 class="eventTitle text-center p-3">{{ event.title }}</h5>
+        <hr class="card-separator">
+        <article class="cardContent">
+            <p>Description : </p>
+            <p class="pl-3">{{ event.content }} .</p>
+        </article>
+    </div>
+</div>

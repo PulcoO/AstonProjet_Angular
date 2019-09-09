@@ -5,10 +5,20 @@
   height: 100vh;
 }
 
+.projectTitle{
+  color: #2c2b2b;
+  font-size: 4em;
+  margin-bottom: 0.2em;
+}
+
+.quote{
+  font-size: 1.5em;
+}
+
 /** section fonctionnalité **/
 .fonctionality {
   background: url('../../../../assets/home/arbre.png') no-repeat;
-  background-size: 40%;
+  background-size: 35%;
   background-position: bottom;
   height: 100vh;
 }
@@ -20,7 +30,7 @@
 
 .containerFonctionality {
   width: 100%;
-  height: 85%;
+  height: 70%;
 }
 
 .logoText1 {
@@ -38,18 +48,41 @@
 /** section event à importer **/
 .events {
   height: 100vh;
+  width: 100%;
   background-color: $color-green-dark;
 }
 
+
 /** section icone **/
-.icons {
-  height: 100vh;
-}
+
+// .icons {
+//   height: 100vh;
+// }
 
 .imgMap {
-  width: 50%;
+  width: 40%;
 }
 
 .containerIcon {
   width: 40%;
+}
+
+.imgIconAlim{
+  width: 25%;
+}
+
+.imgIconJardin{
+  width: 30%;
+}
+
+.imgIconcollectif{
+  width: 13%
+}
+
+.imgIconarti{
+  width: 15%;
+}
+
+.imgIcons{
+  width: 15%;
 }

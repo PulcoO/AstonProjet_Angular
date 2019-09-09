@@ -8,13 +8,14 @@
                 <h4 class="text-center pt-4 mt-5">{{ this.currentUser.pseudo }}</h4>
                 <ul
                     class="userInfo d-flex flex-column align-items-start justify-content-center pl-4 pt-4 list-group list-group-flush">
-                    <li class="list-group-item">Nom Prénom : {{ this.currentUser.lastname }}
+                    <li class="list-group-item"> <span>Nom Prénom : </span> {{ this.currentUser.lastname }}
                         {{ this.currentUser.firstname }} </li>
-                    <li class="list-group-item">Date de naissance :
+                    <li class="list-group-item"> <span>Date de naissance : </span>
                         {{ this.currentUser.birthdate | date: 'dd/MM/yyyy' }}</li>
-                    <li class="list-group-item">Adresse postale :
+                    <li class="list-group-item"> <span>Adresse postale : </span>
                         {{ this.currentUser.adress + ' '+ this.currentUser.cp + ' '+ this.currentUser.city }}</li>
-                    <li class="mb-4" class="list-group-item">Adresse Mail : {{ this.currentUser.email }}</li>
+                    <li class="mb-4" class="list-group-item"> <span> Adresse Mail : </span> {{ this.currentUser.email }}
+                    </li>
 
                     <div class="d-flex justify-content-end">
                         <img class="userUpdate img-fluid" src="../../../../assets/profile/icone_modifuser.png" alt="">

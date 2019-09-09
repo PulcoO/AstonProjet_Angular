@@ -53,6 +53,10 @@
   .userInfo{
     width: 100%
   }
+  span{
+    font-weight: bold;
+    color:  $color-green-dark;
+  }
   
   .userUpdate{
     margin: 8%;

@@ -26,6 +26,7 @@ import { ReadMoreComponent } from './components/layout/buttons/read-more/read-mo
 import { ProfilComponent } from './components/pages/profil/profil/profil.component';
 import { LoginComponent } from './components/pages/profil/login/login.component';
 import { RegisterComponent } from './components/pages/profil/register/register.component';
+import { EventComponent } from './components/layout/event/event.component';
 
 
 
@@ -49,6 +50,7 @@ import { RegisterComponent } from './components/pages/profil/register/register.c
     ProfilComponent,
     LoginComponent,
     RegisterComponent,
+    EventComponent,
   ],
   imports: [
     ReactiveFormsModule,

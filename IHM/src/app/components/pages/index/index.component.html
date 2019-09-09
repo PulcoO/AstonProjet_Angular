@@ -1,12 +1,21 @@
 <section class="firstView d-flex flex-column align-items-center justify-content-center">
-  <h1>Nom du Projet</h1>
-  <q>Créateur de lien</q>
+  <h1 class="projectTitle">MyEco</h1>
+  <q class="quote">Créateur de liens</q>
 </section>
 
 <section class="fonctionality">
   <h2 class="p-5 text-center">Les fonctionnalités</h2>
 
+  <div class="d-flex justify-content-center">
+    <p class="text-center logoText1">
+      <img src="../../../../assets/home/sprout.png" alt="" class="imgFonctionality" /><span
+        class="font-weight-bold">Consommons mieux !</span> <br>
+      Vous cherchez un magasin bio, des produits équitables ? On vous donne nos bons plans.
+    </p>
+  </div>
+
   <div class="d-flex align-items-center justify-content-between containerFonctionality ">
+
     <div class=" logoText1 d-flex flex-column justify-content-strart pl-5 ">
 
       <p class="mb-5 text-center">
@@ -28,11 +37,7 @@
           class="font-weight-bold">Envie de sortir ?</span> <br>
         Profitez des différents événements prévus près de chez vous.
       </p>
-      <p class="text-center mb-5">
-        <img src="../../../../assets/home/sprout.png" alt="" class="imgFonctionality" /><span
-          class="font-weight-bold">Consommons mieux !</span> <br>
-        Vous cherchez un magasin bio, des produits équitables ? On vous donne nos bons plans.
-      </p>
+
       <p class="text-center mb-5">
         <img src="../../../../assets/home/sprout.png" alt="" class="imgFonctionality" /><span
           class="font-weight-bold">Simple</span> <br>
@@ -44,29 +49,40 @@
   </div>
 </section>
 
-<section class="events d-flex justify-content-center align-items-center">
-  <div class="containerEvents"></div>
+<section class="events ">
+  <app-event></app-event>
 </section>
 
 <section class="icons">
-  <h2 class="p-3 text-center">Les icones</h2>
-  <div class="d-flex justify-content-between align-items-center">
+  <h2 class="p-5 text-center">Les icones</h2>
+  <div class="d-flex justify-content-around align-items-center">
     <img src="../../../../assets/home/carte.png" alt="" class="imgMap" />
 
-    <div class="d-flex flex-column align-items-start justify-content-center containerIcon">
-      <div class="d-flex p-2 justify-content-center align-items-center">
-        <img src="../../../../assets/home/icons8-nourriture-végétarienne-50.png" alt="" class="p-3" />
-        <p>Alimentation</p>
+    <div class="d-flex flex-column align-items-start containerIcon">
+
+      <div class="d-flex  justify-content-start  align-items-center">
+        <img src="../../../../assets/home/alimentation.png" alt="" class="p-3 imgIconAlim" />
+        <p>Alimentation et agriculture</p>
       </div>
 
-      <div class="d-flex p-2 justify-content-center align-items-center">
-        <img src="../../../../assets/home/icons8-cintre-64.png" alt="" class="p-3" />
-        <p>Textile</p>
+      <div class="d-flex justify-content-start  align-items-center">
+        <img src="../../../../assets/home/habitatJardin.png" alt="" class="p-3 imgIconJardin" />
+        <p>Habitat / Jardin</p>
       </div>
 
-      <div class="d-flex p-2 justify-content-center align-items-center">
-        <img src="../../../../assets/home/icons8-planté-à-la-main-64.png" alt="" class="p-3" />
-        <p>Jardin Collaboratif</p>
+      <div class="d-flex justify-content-start align-items-center">
+        <img src="../../../../assets/home/iconcollectivité.png" alt="" class="p-3 imgIconcollectif" />
+        <p>Collectifs citoyens</p>
+      </div>
+
+      <div class="d-flex justify-content-start align-items-center">
+        <img src="../../../../assets/home/Artisanat.png" alt="" class="p-3 imgIconarti" />
+        <p>Artisanat</p>
+      </div>
+
+      <div class="d-flex justify-content-start align-items-center">
+        <img src="../../../../assets/home/iconcollaboratif.png" alt="" class="p-3 imgIcons" />
+        <p>Lieux collaboratifs</p>
       </div>
     </div>
   </div>
