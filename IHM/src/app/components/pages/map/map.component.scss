@@ -34,7 +34,7 @@
   border-radius: 0 2rem 0 0;
   // border-right: 10px solid $color-green-dark;
   // border-top: 10px solid $color-green-dark;
-  background-color: $color-green-dark;
+  background-color: $color-green-light;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -64,7 +64,7 @@
   }
 
 .formSidenav {
-  background-color: $color-green-dark;
+  background-color: $color-green-light;
   height: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -106,7 +106,7 @@ img {
 }
 .text_sideBar{
   height: 100%;
-  border-right: 10px solid $color-green-dark;
+  border-right: 10px solid $color-green-light;
   //border-radius: 2rem;
   background-color: white;
   width: 90%;
@@ -115,9 +115,9 @@ img {
 .bottomSidenav {
   height: 10%;
   border-radius: 0 0 20px 0;
-  border-right: 10px solid $color-green-dark;
-  border-bottom: 10px solid $color-green-dark;
-  background-color: $color-green-dark;
+  border-right: 10px solid $color-green-light;
+  border-bottom: 10px solid $color-green-light;
+  background-color: $color-green-light;
 }
 
 ::ng-deep .map {
@@ -135,8 +135,8 @@ height: 60px;
 padding: 10px;
 text-align:center;
 overflow:hidden;
-border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-right: 1px solid rgba(255, 255, 255, 0.5);
+border-top: 1px solid rgba(100, 192, 5, 0.5);
+border-right: 1px solid rgba(100, 192, 5, 0.5);
 // border-bottom: 2px solid black;
 border-radius: 1rem;
 margin: 3px;
@@ -150,13 +150,14 @@ padding: 10px;
 text-align:center;
 overflow:hidden;
 // border-top: 2px solid black;
-border-left : 1px solid rgba(255, 255, 255, 0.5);
-border-bottom: 1px solid  rgba(255, 255, 255, 0.5);
+border-left : 1px solid rgba(100, 192, 5, 0.5);
+border-bottom: 1px solid  rgba(100, 192, 5, 0.5);
+box-shadow: 0px 1px 1px 0px rgba(100,192,5,0.5);
 border-radius: 1rem;
 margin: 3px;
 }
 .inactive .category_icon{
-  color: white;
+  color: $color-green-dark;
   font-size: 2rem;
   display: flex;
   justify-content: center;
