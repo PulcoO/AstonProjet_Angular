@@ -40,10 +40,27 @@
   justify-content: center;
   align-items: center;
 }
+  .topSidenav_left{
+    width: 20%;
+    height: 100%;
+    margin-right: 5%;
+  }
+  .topSidenav_searchBar{
+    width: 80%;
+    height: 100%;
+    padding: 5%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center
+  }
   .searchBar {
+    
     border: none;
     border-radius: 10px;
     text-align: center;
+    
   }
 
 .formSidenav {
@@ -54,6 +71,7 @@
   justify-content: space-between;
 }
   .icone_sideBar{
+    width: 20%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
