@@ -18,8 +18,8 @@ body {
 .image-container{
     min-height: 200px;height: 200px;
     overflow: hidden;
-    border-radius: 2rem 2rem 0 0;
-    padding: 10px 0 0 0;
+    border-radius: 0 0 0 0;
+    padding: 15px 15px 0 15px;
 }
 .title-img{
     text-align: center;
@@ -31,12 +31,12 @@ body {
 }
 .card-img-top {
     height: 100%;
-    border-radius: 2rem 2rem 0 0;
+    border-radius: 0rem 0rem 0 0;
 }
 
 ::ng-deep .card {
     border: none;
-    border-radius: 2rem;
+    border-radius: 2rem 2rem 2rem 2rem;
     margin-top: 2%;
     margin-bottom: 2%;
     margin-right: 15px;

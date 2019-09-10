@@ -2,13 +2,21 @@
     <div class="sidenav_container">
         <div id="slide-out" class="side-nav d-flex flex-column justify-content-center align-items-stretch sidenav">
             <div class="topSidenav">
+                <div class="topSidenav_left">
+                </div>
                 <input type="text" placeholder="search" class="searchBar">
             </div>
             <form class="formSidenav" (ngSubmit)="editCategoriesSubmit()">
                 <div class="icone_sideBar">
-                        <div *ngFor="let category of principal_categories" (click)=addCategoryChecked(category.id)>{{ category.name }}</div>
+                        <!-- <div [ngClass]="categoryFilter.indexOf(category.id) !=-1 ?'active': 'inactive'">Tous</div> -->
+                        <div *ngFor="let category of principal_categories" [ngClass]="categoryFilter.indexOf(category.id) !=-1 ?'active': 'inactive'" (click)=addCategoryChecked(category.id)>
+                            <!-- <img class="category_icon" src="{{category.icon}}" alt="{{category.name}}"> -->
+                            <i class="category_icon {{category.icon_class}}"></i>
+                            <span class="category_name">{{category.name}}</span>
+                        </div>
                 </div>
                 <div class="text_sideBar">
+
                 </div>
             </form>
             <div class="bottomSidenav">

@@ -9,7 +9,6 @@
   flex-flow: row nowrap;
   background-color: whitesmoke;
   align-items: center;
-   
 }
 
 .sidenav_container {
@@ -32,8 +31,10 @@
 .topSidenav {
   height: 15%;
   padding: 1%;
-  border-radius: 0 20px 0 0;
-  background-color: black;
+  border-radius: 0 2rem 0 0;
+  // border-right: 10px solid $color-green-dark;
+  // border-top: 10px solid $color-green-dark;
+  background-color: $color-green-dark;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -46,7 +47,7 @@
   }
 
 .formSidenav {
-  background-color: #4caf50;
+  background-color: $color-green-dark;
   height: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -57,7 +58,8 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: space-between;
-    border: solid black 1px;
+    margin-right: 5%;
+    // border: solid black 1px;
   }
     .icone{
       height: 30px;
@@ -84,11 +86,20 @@ img {
   border-radius: 10px;
   background-color: #fff;
 }
+.text_sideBar{
+  height: 100%;
+  border-right: 10px solid $color-green-dark;
+  //border-radius: 2rem;
+  background-color: white;
+  width: 90%;
+}
 
 .bottomSidenav {
   height: 10%;
   border-radius: 0 0 20px 0;
-  background-color: black;
+  border-right: 10px solid $color-green-dark;
+  border-bottom: 10px solid $color-green-dark;
+  background-color: $color-green-dark;
 }
 
 ::ng-deep .map {
@@ -98,6 +109,69 @@ img {
   width: 80%;
   margin: 1%;
   border-radius: 20px;
+}
+.active {
+background-color: white;
+width: 60px;
+height: 60px;
+padding: 10px;
+text-align:center;
+overflow:hidden;
+border-top: 1px solid rgba(255, 255, 255, 0.5);
+border-right: 1px solid rgba(255, 255, 255, 0.5);
+// border-bottom: 2px solid black;
+border-radius: 1rem;
+margin: 3px;
+}
+
+.inactive{
+background-color: transparent;
+width: 60px;
+height: 60px;
+padding: 10px;
+text-align:center;
+overflow:hidden;
+// border-top: 2px solid black;
+border-left : 1px solid rgba(255, 255, 255, 0.5);
+border-bottom: 1px solid  rgba(255, 255, 255, 0.5);
+border-radius: 1rem;
+margin: 3px;
+}
+.inactive .category_icon{
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  outline: none;
+}
+.active .category_icon{
+  color: $color-green-dark;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  outline: none;
+}
+.category_name{
+  visibility: hidden;
+  width: 120px;
+  background-color: #444444;
+  color: #fff;
+  text-align: center;
+  margin: 1%;
+  padding: 1px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  font-size: 0.8rem;
+}
+.inactive:hover .category_name{
+  visibility: visible; 
 }
 
 /////////// BIND POPOP //////////////////

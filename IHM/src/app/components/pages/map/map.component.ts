@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+'../../../../assets/home/'
 
 @Component({
   selector: 'app-map',
@@ -47,30 +48,44 @@ export class MapComponent implements OnInit {
 
   // Constantes
   private principal_categories = [
+    // {
+    //   id:0,
+    //   name: "ALL",
+    // },
     {
       id: 532,
       name : "Alimentaire et agriculture",
-      checked : true
+      checked : true,
+      icon_class: 'fas fa-carrot',
+      icon: '../../../../assets/home/alimentation.png'
     },
     {
       id: 557,
       name : "Habitat / Jardin",
-      checked : true
+      checked : true,
+      icon_class: 'fas fa-home',
+      icon: '../../../../assets/home/habitatJardin.png'
     },
     {
       id: 802,
       name : "Collectifs citoyens",
-      checked : true
+      checked : true,
+      icon_class: 'fas fa-user-friends',
+      icon: '../../../../assets/home/iconcollectivité.png'
     },
     {
       id: 794,
       name : "Lieux collaboratifs",
-      checked : true
+      checked : true,
+      icon_class: 'fas fa-hands-helping',
+      icon: '../../../../assets/home/iconcollaboratif.png'
     },
     {
       id: 612,
       name : "Artisanat",
-      checked : true
+      checked : true,
+      icon_class: 'fas fa-tshirt',
+      icon: '../../../../assets/home/Artisanat.png'
     }
   ]
   constructor(private http: HttpClient) {
