@@ -44,23 +44,34 @@ export class MapComponent implements OnInit {
   private categoryFilter = []
   private categoryCheckedList = [] // permet d'enregistrer l'entrée dans le tableau d'un id connu ou inconnu en comparaison.
 
+  private sousCategoryList = []
+
   public url = 'http://localhost:9090/actor';
 
   // Constantes
   private principal_categories = [
-    // {
-    //   id:0,
-    //   name: "ALL",
-    // },
     {
       id: 532,
       name : "Alimentaire et agriculture",
       checked : true,
       icon_class: 'fas fa-carrot',
       icon: '../../../../assets/home/alimentation.png',
-      sous_categories : {
-        
-      }
+      categories : [
+        {
+          id: 537,
+          name : 'Circuits courts'
+        },
+        {
+          id: 539,
+          name : 'Amap/Paniers'
+        },
+        {
+          id: 540,
+          name : 'Légumes'
+        },
+
+      ]
+      
     },
     {
       id: 557,
@@ -91,6 +102,7 @@ export class MapComponent implements OnInit {
       icon: '../../../../assets/home/Artisanat.png'
     }
   ]
+
   constructor(private http: HttpClient) {
     
    }
@@ -199,6 +211,20 @@ export class MapComponent implements OnInit {
     if (!found) {
       this.categoryCheckedList.push(id);
       this.categoryFilter = this.categoryCheckedList; // Permet de checker booleen actived or not
+      this.categoryFilter.forEach(rechercheId => {
+        console.log(rechercheId)
+        this.principal_categories.forEach(function(obj){
+          if (obj.id == rechercheId){
+            obj.categories.forEach(element => {
+              console.log(element.id)
+            });
+          }else{
+            
+          }
+          
+        })
+      })
+      
     }
     //console.log(this.categoryCheckedList);
     //console.log(this.categoryFilter)
