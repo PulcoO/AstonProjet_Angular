@@ -10,15 +10,13 @@
             </div>
             <form class="formSidenav" (ngSubmit)="editCategoriesSubmit()">
                 <div class="icone_sideBar">
-                        <!-- <div [ngClass]="categoryFilter.indexOf(category.id) !=-1 ?'active': 'inactive'">Tous</div> -->
                         <div *ngFor="let category of principal_categories" [ngClass]="categoryFilter.indexOf(category.id) !=-1 ?'active': 'inactive'" (click)=addCategoryChecked(category.id)>
-                            <!-- <img class="category_icon" src="{{category.icon}}" alt="{{category.name}}"> -->
                             <i class="category_icon {{category.icon_class}}"></i>
                             <span class="category_name">{{category.name}}</span>
                         </div>
                 </div>
                 <div class="text_sideBar">
-
+                    <!-- <div *ngFor="let sub_category of {{category.name}}_sub_category"></div> -->
                 </div>
             </form>
             <div class="bottomSidenav">

@@ -57,7 +57,10 @@ export class MapComponent implements OnInit {
       name : "Alimentaire et agriculture",
       checked : true,
       icon_class: 'fas fa-carrot',
-      icon: '../../../../assets/home/alimentation.png'
+      icon: '../../../../assets/home/alimentation.png',
+      sous_categories : {
+        
+      }
     },
     {
       id: 557,
