@@ -1,3 +1,4 @@
+import {Category} from './category.model'
 export interface Actor {
     id: string;
     name: string;
@@ -12,7 +13,8 @@ export interface Actor {
     telephonenumber:number;
     openhours: string;
     image: string;
-    categories: object;
+    categories: Category[];
+    
     created_at: Date;
     updated_at: Date;
 }
