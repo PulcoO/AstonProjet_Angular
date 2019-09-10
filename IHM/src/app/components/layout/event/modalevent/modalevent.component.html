@@ -1,0 +1,9 @@
+<form class="d-flex flex-column align-items-start justify-content-center formInput" [formGroup]="form"
+    (ngSubmit)="onSave()">
+    <input class="mb-2" type="text" placeholder="titre" formControlName="title">
+    <textarea class="mb-2" cols="30" rows="5" placeholder="description" formControlName="content"></textarea>
+    <input class="mb-2" type="date" formControlName="datebegin">
+    <input class="mb-3" type="text" placeholder="lieu" formControlName="location">
+
+    <button type="submit">Envoyer</button>
+</form>

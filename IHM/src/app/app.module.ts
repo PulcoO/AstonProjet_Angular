@@ -27,6 +27,7 @@ import { ProfilComponent } from './components/pages/profil/profil/profil.compone
 import { LoginComponent } from './components/pages/profil/login/login.component';
 import { RegisterComponent } from './components/pages/profil/register/register.component';
 import { EventComponent } from './components/layout/event/event.component';
+import { ModaleventComponent } from './components/layout/event/modalevent/modalevent.component';
 
 
 
@@ -51,6 +52,7 @@ import { EventComponent } from './components/layout/event/event.component';
     LoginComponent,
     RegisterComponent,
     EventComponent,
+    ModaleventComponent,
   ],
   imports: [
     ReactiveFormsModule,
@@ -62,7 +64,7 @@ import { EventComponent } from './components/layout/event/event.component';
     HttpClientModule,
   ],
   providers: [
-    
+
   ],
   bootstrap: [AppComponent]
 })

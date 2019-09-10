@@ -4,15 +4,17 @@ p{
     margin-bottom:0.5em;
 }
 
+.allEvent{
+    width: 100%;
+    height: 65%;
+}
+
 .containerCard{
-    width: 40%;
-    height: 70%;
+    width: 30%;
+    height: 100%;
     background-color: #fff;
     border-radius:10px;
     overflow: hidden;
-    position: relative;
-    top: 2%;
-    left: 30%;
 }
 
 .cardTop{
@@ -36,4 +38,16 @@ p{
 .card-content{
     width: 100%;
     height: 100%
+}
+
+.addEvent{
+    width: 15%;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid white;
+    background: #fff;
+    color: $color-green-dark;
+    border-radius: 40px;
+    cursor: pointer;
+    
 }

@@ -7,6 +7,7 @@ import { ActorDetailComponent } from './components/pages/actor/actor-detail/acto
 import { LoginComponent } from './components/pages/profil/login/login.component';
 import { RegisterComponent } from './components/pages/profil/register/register.component';
 import { ProfilComponent } from './components/pages/profil/profil/profil.component';
+import { ModaleventComponent } from './components/layout/event/modalevent/modalevent.component';
 
 
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'profil/:userId', component: ProfilComponent },
   { path: "register", component: RegisterComponent },
   { path: "login", component: LoginComponent },
+  { path: "event", component: ModaleventComponent }
 ];
 
 @NgModule({

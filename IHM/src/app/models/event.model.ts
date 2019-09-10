@@ -1,9 +1,9 @@
-export interface EventHome {
-    id: string;
-    title: string;
-    content: string;
-    datebegin: Date;
-    location: string;
-    created_at: Date;
-    updated_at: Date;
+export class EventHome {
+    id?: number;
+    title = '';
+    content = '';
+    datebegin = new Date();
+    location = '';
+    created_at = new Date();
+    updated_at = new Date();
 }

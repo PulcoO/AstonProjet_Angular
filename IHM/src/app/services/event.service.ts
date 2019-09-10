@@ -13,4 +13,9 @@ export class EventService {
   getEvent() {
     return this.http.get<EventHome>("http://localhost:9090/events")
   }
+
+  add(event: EventHome): Observable<EventHome> {
+    console.log(event);
+    return this.http.post<EventHome>("http://localhost:9090/events/create", event)
+  }
 }
