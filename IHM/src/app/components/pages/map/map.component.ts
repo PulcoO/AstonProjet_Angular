@@ -145,11 +145,6 @@ export class MapComponent implements OnInit {
           '<div class="card-body">'+
           '<div class="card-header bg-transparent" style="border:none;">'+
           '<div class="header-top" style="width: 100%;height: 20%;display: flex;flex-direction: row;justify-content: space-between;">'+
-          // '<div class="title">'+
-          // '<h5 class="card-title h5" style="margin:0;">'+actor.name+'</h5>'+
-          // '</div>'+
-          // '<div class="header_button">'+
-          // '</div>'+
           '</div>'+
           '<div class="header-bottom">'+
           '</div>'+
@@ -159,8 +154,6 @@ export class MapComponent implements OnInit {
           '</div>'+
           '<div class="card-footer text-muted text-center bg-transparent" style="height: 20%;margin:0;padding:0;width: 100%;">'+
           '<div class="button-read-more">'+
-          // '<a href="#" [routerLink]="[/actor,+actor.id+]" class="green-text d-flex flex-row-reverse p-2 button-read-more">'+
-          // '<h5 class="waves-effect waves-light">Read more<i class="fas fa-angle-double-right ml-2"></i></h5>'+
           '</a>'+
           '</div>'+
           '</div>'+
