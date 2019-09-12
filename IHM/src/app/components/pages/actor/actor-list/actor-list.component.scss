@@ -96,10 +96,13 @@ body {
 }
 .content{
     margin:0;
-    padding:0;
-    height: 20%;
+    padding:15px;
+    height: 100%;
     overflow: scroll;
     scrollbar-width: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .description{

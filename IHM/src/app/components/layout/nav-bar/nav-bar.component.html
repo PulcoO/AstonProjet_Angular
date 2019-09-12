@@ -5,7 +5,7 @@
   <!-- Navbar brand -->
   <mdb-navbar-brand><a class="navbar-brand text-white" href="#"> <img src="../../../../assets/home/favicon-32.png"
         alt="" class="w-90 imgLogo">
-      MyEco</a></mdb-navbar-brand>
+      Bio connect'</a></mdb-navbar-brand>
 
   <!-- Collapsible content -->
   <links>
@@ -14,7 +14,7 @@
 
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link text-white waves-light" mdbWavesEffect [routerLink]="['/map']">
+        <a class="nav-link text-white waves-light" mdbWavesEffect [routerLink]="['/map']" [routerLinkActive]="['activeLink', 'nonActiveLink']">
           <mdb-icon fas icon="map-marker-alt"></mdb-icon>La carte<span class="sr-only">(current)</span>
         </a>
       </li>
@@ -24,7 +24,7 @@
         </a>
       </li>
       <li class="nav-item ">
-        <a class=" nav-link text-white" mdbWavesEffect [routerLink]="['/actorList']">
+        <a class=" nav-link text-white" mdbWavesEffect [routerLink]="['/actorList']" [routerLinkActive]="['activeLink', 'nonActiveLink']">
           <mdb-icon fas icon="list"></mdb-icon>La liste des acteurs
         </a>
       </li>
@@ -35,12 +35,12 @@
         </a>
       </li> -->
       <li class="nav-item ">
-        <a class=" nav-link text-white" mdbWavesEffect href="#events">
+        <a class=" nav-link text-white" mdbWavesEffect href="#events" [routerLinkActive]="['activeLink', 'nonActiveLink']">
           <mdb-icon fas icon="calendar-alt"></mdb-icon> Events
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-light text-white" mdbWavesEffect [routerLink]="['/login']">
+        <a class="nav-link waves-light text-white" mdbWavesEffect [routerLink]="['/login']" [routerLinkActive]="['activeLink', 'nonActiveLink']">
           <mdb-icon fas icon="user"></mdb-icon>
           Profil
         </a>
