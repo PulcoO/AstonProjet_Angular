@@ -2,11 +2,11 @@
     <div class="sidenav_container">
         <div id="slide-out" class="side-nav d-flex flex-column justify-content-center align-items-stretch sidenav">
             <div class="topSidenav">
-                <div class="topSidenav_left">
+                <!-- <div class="topSidenav_left">
                 </div>
                 <div class="topSidenav_searchBar">
                         <input type="text" placeholder="search" class="searchBar" >
-                </div>
+                </div> -->
             </div>
             <form class="formSidenav" (ngSubmit)="editCategoriesSubmit()">
                 <div class="icone_sideBar">
@@ -15,18 +15,26 @@
                             <span class="category_name">{{category.name}}</span>
                         </div>
                 </div>
-                <div class="text_sideBar">
-                    <!-- <div>
-                        <h1>{{category.name}}</h1>
-                    </div> -->
-                    <!-- <div *ngFor="let sub_category of category.categories">
-                        
-                    </div> -->
-                </div>
             </form>
             <div class="bottomSidenav">
             </div>
         </div>
     </div>
+    <div class="text_sideBar">
+        
+        <div class="sousCategories_content" *ngFor="let category of checkedList">
+            <div class="sous_category_title">
+                <h6>{{category.name}}</h6>
+            </div>
+            <div class="sous_category_checkbox">
+                <div class="custom-control custom-checkbox" *ngFor="let sousCategories of category.categories">
+                    <input type="checkbox" class="custom-control-input" [id]="'cat_' + sousCategories.id" [value]="sousCategories.id" (click)=addSousCategoryChecked(sousCategories.id)>
+                    <label class="custom-control-label" [for]="'cat_' + sousCategories.id">{{sousCategories.name}}</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
     <div id="frugalmap" class="map"></div>
 </section>

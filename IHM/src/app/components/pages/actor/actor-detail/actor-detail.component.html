@@ -93,9 +93,12 @@
                                 </div>
                                 <div class="comments">
                                         <div class="comment" id="{{comment.id}}" *ngFor="let comment of actor.Comments">
-                                            
-                                            <h6>{{comment.userId}} :</h6>
-                                            <p>{{comment.content}}</p>
+                                            <h6>{{comment.User.pseudo}} :</h6>
+                                            <p class="comment_text">{{comment.content}}</p>
+                                            <div>
+                                                <p class="name">{{comment.User.firstname}} {{comment.User.lastname}}</p>
+                                                <!-- <p>{{comment.createdAt}}</p> -->
+                                            </div>
                                         </div>
                                 </div>
                             </div>
