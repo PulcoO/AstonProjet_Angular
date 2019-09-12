@@ -1,0 +1,107 @@
+@import "../../../../../styles.scss";
+.addActor {
+    height: 100vh;
+    background-color: whitesmoke;
+    background-size: 80%;
+  }
+  
+.containerForm {
+width: 90%;
+height: 90%;
+}
+
+.form {
+width: 90%;
+height: 100%;
+background-color: #fff;
+border: $color-green-dark 2px solid;
+box-shadow: 10px 10px 5px 0px rgba($color-green-dark, 0.5);
+border-radius: 10px;
+overflow: hidden;
+}
+  
+.loginTitle {
+height: 15%;
+width: 100%;
+margin: 0%;
+padding: 0%;
+color: $color-green-dark;
+}
+
+.containerInput{
+    width: 100%;
+}
+
+.container1, .container2{
+    width: 30%;
+}
+
+.containerCategory{
+    width: 40%;
+    color: $color-green-dark;
+}
+
+.containerCheckbox{
+    width: 60%;
+}
+
+.checkTitle{
+    width: 100%;
+}
+
+//input
+i {
+color: $color-green-dark;
+}
+
+input{
+    width: 60%;
+    border-radius: 15px;
+    border: 1px solid #b7b7b7;
+    color: $color-green-dark
+}
+
+input:focus:not([readonly]) {
+    border: 1px solid $color-green-dark;
+    color: $color-green-dark;
+    box-shadow: 3px 2px 2px #b7b7b7;
+}
+
+::placeholder {
+text-align: left;
+margin-left: 5%;
+opacity: 0.5;
+color: $color-green-dark;
+}
+
+.check{
+    width: 5%;
+}
+
+//btn submit
+
+.submitBtn {
+width: 10%;
+line-height: 1;
+letter-spacing: 1px;
+// padding: 2%;
+border: 2px solid $color-green-dark;
+background: #fff;
+color: $color-green-dark;
+border-radius: 40px;
+cursor: pointer;
+overflow: hidden;
+}
+
+.submitBtn:hover {
+background: $color-green-dark;
+color: #fff;
+box-shadow: 5px 0px 10px 0px  #b7b7b7;
+}
+
+.button{
+    position: relative;
+    bottom: 5%;
+    right: 5%;
+}
+

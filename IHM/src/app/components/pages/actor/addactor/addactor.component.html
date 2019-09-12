@@ -1,0 +1,69 @@
+<section class="addActor d-flex justify-content-center align-items-center">
+        <div class="containerForm d-flex justify-content-around align-items-center pt-5">
+    
+            <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    
+                <p class="h4 pt-5 text-center loginTitle ">Ajouter un acteur</p>
+
+                <div class="d-flex justify-content-start containerInput pl-5">
+
+                    <div class="d-flex flex-column align-items-start formInput container1">
+                        <input type="text" id="defaultLoginFormEmail" class="form-control mb-3 mt-5 input" placeholder="Name"
+                            formControlName="name">
+                        <input type="latitude" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
+                            placeholder="Latitude" formControlName="geoLatitude">
+                        <input type="text" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
+                            placeholder="Longitude" formControlName="geoLongitude">
+                        <input type="text" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
+                            placeholder="Adresse" formControlName="adress">
+                        <input type="text" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
+                            placeholder="Ville" formControlName="city">
+                        <input type="text" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
+                            placeholder="CP" formControlName="cp">
+                        <input type="text" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
+                            placeholder="Pays" formControlName="country">
+                    </div>
+                    <div class="d-flex flex-column align-items-start formInput container2">
+                        <input type="text" id="defaultLoginFormPassword" class="form-control mb-3 mt-5 input"
+                        placeholder="Site web" formControlName="Website">
+                        <input type="text" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
+                        placeholder="Description" formControlName="description">
+                        <input type="text" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
+                        placeholder="telephone" formControlName="telephonenumber">
+                        <input type="text" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
+                        placeholder="heure d'ouverture" formControlName="openhours">
+                        <input type="text" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
+                        placeholder="heure d'ouverture" formControlName="openhours">
+                        <input type="text" id="defaultLoginFormPassword" class="form-control mb-3 mt-2 input"
+                        placeholder="image" formControlName="image">
+                    </div>
+                    <div class="containerCategory d-flex flex-column align-items-start mt-5 ">
+                        <p>Catégories : </p>
+                        <div class="d-flex justify-content-start containerCheckbox pl-5">
+                            <input type="checkbox" id="Alimentation" class="check mr-2" name="Alimentation">
+                            <label for="Alimentation">Alimentation et agriculture</label>
+                        </div>
+                        <div class="d-flex justify-content-start containerCheckbox pl-5">
+                            <input type="checkbox" id="Alimentation" class="check mr-2" name="HabitatJardin">
+                            <label for="HabitatJardin" class="checkTitle">Habitat et jardins</label>
+                        </div>
+                        <div class="d-flex justify-content-start containerCheckbox pl-5">
+                            <input type="checkbox" id="Alimentation" class="check mr-2" name="CollectifsCitoyens">
+                            <label for="CollectifsCitoyens">Collectifs citoyens</label>
+                        </div>
+                        <div class="d-flex justify-content-start containerCheckbox pl-5">
+                            <input type="checkbox" id="Alimentation" class="check mr-2" name="Artisanat">
+                            <label for="Artisanat">Artisanat</label>
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center containerCheckbox pl-5">
+                            <input type="checkbox" id="Alimentation" class="check mr-2" name="LieuxCollaboratif">
+                            <label for="LieuxCollaboratif">Lieux collaboratifs</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end button">
+                    <button class="btn btn-info btn-block my-4 submitBtn" type="submit">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </section>

@@ -95,4 +95,19 @@
     height: 30%;
     width: 100%;
   }
+
+.addActorLink{
+  text-align: center;
+  border: 2px solid $color-green-dark;
+  background: #fff;
+  color: $color-green-dark;
+  border-radius: 40px;
+  font-weight: bolder;
+}
+
+.addActorLink:hover{
+  background: $color-green-dark;
+  color: #fff;
+  box-shadow: 5px 0px 10px 0px  #b7b7b7;
+}
   

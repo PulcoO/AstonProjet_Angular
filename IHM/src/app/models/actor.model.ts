@@ -1,18 +1,18 @@
 import {Category} from './category.model'
-export interface Actor {
-    id: string;
-    name: string;
-    geoLatitude: string;
-    geoLongitude : string;
-    adress: string;
-    city: string;
-    cp: string;
-    country:string;
-    website: string;
-    description:string;
-    telephonenumber:number;
-    openhours: string;
-    image: string;
+export class Actor {
+    id?: string;
+    name: '';
+    geoLatitude: '';
+    geoLongitude : '';
+    adress: '';
+    city: '';
+    cp: '';
+    country:'';
+    website: '';
+    description:'';
+    telephonenumber:'';
+    openhours: '';
+    image: '';
     categories: Category[];
     
     created_at: Date;

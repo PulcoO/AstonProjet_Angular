@@ -1,9 +1,18 @@
-<form class="d-flex flex-column align-items-start justify-content-center formInput" [formGroup]="form"
-    (ngSubmit)="onSave()">
-    <input class="mb-2" type="text" placeholder="titre" formControlName="title">
-    <textarea class="mb-2" cols="30" rows="5" placeholder="description" formControlName="content"></textarea>
-    <input class="mb-2" type="date" formControlName="datebegin">
-    <input class="mb-3" type="text" placeholder="lieu" formControlName="location">
+<section class="addEvent d-flex justify-content-center align-items-center">
+    <div class="containerForm d-flex justify-content-around align-items-center">
 
-    <button type="submit">Envoyer</button>
-</form>
+        <form class="form" [formGroup]="form"
+            (ngSubmit)="onSave()">
+            <p class="h4 pt-5 text-center eventTitle ">Ajouter un événement</p>
+
+            <div class="d-flex flex-column align-items-center ml-3 mr-3 formInput">
+                    <input type="text" placeholder="titre" formControlName="title" class="form-control mb-3 mt-5 input" >
+                    <textarea cols="30" rows="5" placeholder="description" formControlName="content" class="form-control mb-3 mt-2 input textarea"></textarea>
+                    <input type="date" formControlName="datebegin" class="form-control mb-3 mt-2 inputDate" class="form-control mb-3 mt-2 input">
+                    <input type="text" placeholder="lieu" formControlName="location" class="form-control mb-3 mt-2 input">
+                    <button type="submit" class="submitBtn">Envoyer</button>
+
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,27 +1,79 @@
 @import "../../../../../styles.scss" ;
-
-form{
-    margin-top: 10%;
-    margin-left: 40%;
+.addEvent {
+  height: 100vh;
+  background-color: whitesmoke;
+  background-size: 80%;
 }
 
-input, textarea{
-    width: 30%;
-    padding-left: 1%;
-    border-radius: 15px;
-    color: $color-green-dark;
-    border: 1px solid #b7b7b7;
+.containerForm {
+  width: 80%;
+  height: 75%;
   }
-  
-  input:focus:not([readonly]) {
+
+.form {
+  width: 55%;
+  height: 100%;
+  background-color: #fff;
+  border: $color-green-dark 2px solid;
+  box-shadow: 10px 10px 5px 0px rgba($color-green-dark, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  }
+    
+.eventTitle {
+height: 15%;
+letter-spacing: 3px;
+width: 100%;
+margin: 0%;
+padding: 0%;
+color: $color-green-dark;
+}
+
+input{
+  width: 60%;
+  border-radius: 15px;
+  border: 1px solid #b7b7b7;
+  color: $color-green-dark
+}
+
+.textarea{
+  width: 60%;
+}
+
+.inputDate{
+  opacity: 0.5;
+}
+
+input:focus:not([readonly]) {
     border: 1px solid $color-green-dark;
     color: $color-green-dark;
     box-shadow: 3px 2px 2px #b7b7b7;
+}
+
+::placeholder {
+text-align: left;
+margin-left: 5%;
+opacity: 0.5;
+color: $color-green-dark;
+}
+
+.submitBtn {
+  width: 30%;
+  line-height: 1;
+  letter-spacing: 1px;
+  padding: 2%;
+  border: 2px solid $color-green-dark;
+  background: #fff;
+  color: $color-green-dark;
+  border-radius: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 2%;
+  margin-left: 65%;
   }
   
-  ::placeholder {
-  text-align: left;
-  margin-left: 1%;
-  opacity: 0.5;
-  color: $color-green-dark;
+  .submitBtn:hover {
+  background: $color-green-dark;
+  color: #fff;
+  box-shadow: 5px 0px 10px 0px  #b7b7b7;
   }
