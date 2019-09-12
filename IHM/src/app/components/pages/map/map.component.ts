@@ -38,17 +38,80 @@ export class MapComponent implements OnInit {
   private layer;
   // // Variables 
 
-  private actorList = [];
-  private editedActeur = [];
+  private categoryNameChecked = [];
+  private checkedList = [];
+  private categoryChecked;
 
   private categoryFilter = []
   private categoryCheckedList = [] // permet d'enregistrer l'entrée dans le tableau d'un id connu ou inconnu en comparaison.
 
-  private sousCategoryList = []
+  private sousCategoryCheckedList = []
+  private sousCategoryFilter = []
 
   public url = 'http://localhost:9090/actor';
 
   // Constantes
+  
+private sous_categories = 
+  [
+    {
+      id : 538,
+      name: 'Producteur & Artisan',
+    },
+    {
+      id : 795,
+      name: 'Création/Réparation',
+    },
+    {
+      id : 799,
+      name: 'Hacker Space',
+    },
+    {
+      id: 575,
+      name : "Jardin partagé"
+    },
+    {
+      id: 574,
+      name: "Jardin"
+    },
+    {
+      id: 537,
+      name : 'Circuits courts'
+    },
+    {
+      id: 539,
+      name : 'Amap/Paniers'
+    },
+    {
+      id: 540,
+      name : 'Légumes'
+    },
+    {
+      id : 534,
+      name: 'Epicerie & Supérette',
+    },
+    {
+      id : 556,
+      name: 'Autre produit',
+    },
+    {
+      id : 824,
+      name: 'Association',
+    },
+    {
+      id : 600,
+      name: "Sortie & Culture",
+    },
+    {
+      id : 604,
+      name: 'Sortie Nature',
+    },
+    {
+      id : 601,
+      name: 'Lieu pour sortir',
+    }
+  ]
+
   private principal_categories = [
     {
       id: 532,
@@ -56,7 +119,12 @@ export class MapComponent implements OnInit {
       checked : true,
       icon_class: 'fas fa-carrot',
       icon: '../../../../assets/home/alimentation.png',
-      categories : [
+      categories: 
+      [
+        {
+          id : 538,
+          name: 'Producteur & Artisan',
+        },
         {
           id: 537,
           name : 'Circuits courts'
@@ -69,37 +137,83 @@ export class MapComponent implements OnInit {
           id: 540,
           name : 'Légumes'
         },
-
+        {
+          id : 534,
+          name: 'Epicerie & Supérette',
+        },
+        {
+          id : 556,
+          name: 'Autre produit',
+        },
+        {
+          id : 824,
+          name: 'Association',
+        },
+        {
+          id : 600,
+          name: "Sortie & Culture",
+        },
+        {
+          id : 604,
+          name: 'Sortie Nature',
+        },
+        {
+          id : 601,
+          name: 'Lieu pour sortir',
+        }
       ]
-      
     },
     {
       id: 557,
       name : "Habitat / Jardin",
       checked : true,
       icon_class: 'fas fa-home',
-      icon: '../../../../assets/home/habitatJardin.png'
+      icon: '../../../../assets/home/habitatJardin.png',
+      categories:
+      [
+        {
+          id: 575,
+          name : "Jardin partagé"
+        },
+        {
+          id: 574,
+          name: "Jardin"
+        },
+      ]
     },
     {
       id: 802,
       name : "Collectifs citoyens",
       checked : true,
       icon_class: 'fas fa-user-friends',
-      icon: '../../../../assets/home/iconcollectivité.png'
+      icon: '../../../../assets/home/iconcollectivité.png',
+      categories: this.sous_categories
     },
     {
       id: 794,
       name : "Lieux collaboratifs",
       checked : true,
       icon_class: 'fas fa-hands-helping',
-      icon: '../../../../assets/home/iconcollaboratif.png'
+      icon: '../../../../assets/home/iconcollaboratif.png',
+      categories: 
+      [
+        {
+          id : 795,
+          name: 'création/Réparation',
+        },
+        {
+          id : 799,
+          name: 'Hacker Space',
+        },
+      ]
     },
     {
       id: 612,
       name : "Artisanat",
       checked : true,
       icon_class: 'fas fa-tshirt',
-      icon: '../../../../assets/home/Artisanat.png'
+      icon: '../../../../assets/home/Artisanat.png',
+      categories: this.sous_categories
     }
   ]
 
@@ -108,6 +222,7 @@ export class MapComponent implements OnInit {
    }
     // // INIT
   ngOnInit() {
+    console.log(this.principal_categories)
     // // INIT MAP
     this.map = L.map('frugalmap').setView([50.6311634, 3.0599573], 12);
 
@@ -165,34 +280,14 @@ export class MapComponent implements OnInit {
           '</div>'+
           '</div>'
         ))
-        // this.layerArray.push(L.marker([actor.geoLatitude, actor.geoLongitude], {icon: this.defaultIcon}).addTo(this.map).bindPopup(
-        // '<div style="display:flex;flex-direction:column;justify-content:space-between;align-items:center;">'+
-        // '<h2>'+actor.name+'</h2>'+
-        // '<img style="width:64px;height:64px;border-radius:100%;" src="'+ actor.image +'" alt="logo entreprise">'+
-        // '</div>'+
-        // '<hr style="width:100%";/>'+
-        // '<div style="margin-top:20px;margin-bottom:20px;">'+actor.description+'</div>'+
-        // '<hr style="width:100%";/>'+
-        // '<div style="display:flex;flex-direction:row;justify-content:space-around;align-items:center;">'+
-        //   '<p style="background-color:#4CAF50;color:white;padding:2px;width:25%;text-align:center;border-radius:1rem;">'+actor.website+'</p>'+
-        //   '<p style="background-color:#4CAF50;color:white;padding:2px;width:25%;text-align:center;border-radius:1rem;">'+actor.adress+'</p>'+
-        //   '<p style="background-color:#4CAF50;color:white;padding:2px;width:25%;text-align:center;border-radius:1rem;">'+actor.city+'</p>'+
-        // '</div>'+
-        // '<hr style="width:100%";/>'+
-        // '<div class="buttons_google text-center"style="display:flex;flex-direction:row;justify-content:center;align-items:center;">'+
-        // '<a type="button" class="btn-floating"><i class="fab fa-facebook-f"></i></a>'+
-        //     '<a type="button" class="btn-floating"><i class="fab fa-twitter"></i></a>'+
-        //     '<a type="button" class="btn-floating"><i class="fab fa-google-plus-g"></i></a>'+
-        //     '</div>'
-        // ))
       });
       this.layer = L.layerGroup(this.layerArray)
-      //console.log(this.layerArray)
       this.map.addLayer(this.layer)
     });
   }
-  addCategoryChecked(id) {
 
+  addCategoryChecked(id) {
+    this.checkedList = [];
     let found=false;
     for (let j=0;j<this.categoryCheckedList.length;j++) {
       if (id == this.categoryCheckedList[j]) {
@@ -204,34 +299,68 @@ export class MapComponent implements OnInit {
     if (!found) {
       this.categoryCheckedList.push(id);
       this.categoryFilter = this.categoryCheckedList; // Permet de checker booleen actived or not
-      this.categoryFilter.forEach(rechercheId => {
-        console.log(rechercheId)
-        this.principal_categories.forEach(function(obj){
-          if (obj.id == rechercheId){
-            obj.categories.forEach(element => {
-              console.log(element.id)
-            });
-          }else{
-            
-          }
-          
-        })
-      })
       
     }
-    //console.log(this.categoryCheckedList);
-    //console.log(this.categoryFilter)
     let url = "";
-    this.categoryFilter.forEach(function(actorId){
+    this.categoryFilter.forEach(function (actorId) {
       url += actorId + "-";
-      console.log(url)
-      console.log('http://localhost:9090/actor/category/'+ url)
     })
-    if (this.categoryFilter.length == 0){
+    if (this.categoryFilter.length == 0) {
       this.initialisationData('http://localhost:9090/actor')
-    }else{
-      this.initialisationData('http://localhost:9090/actor/category/'+ url)
+    } else {
+      this.initialisationData('http://localhost:9090/actor/category/' + url)
     }
-    
+
+    this.categoryCheckedList.forEach(categoryId => {
+      this.categoryChecked = this.getCategoryById(this.principal_categories, categoryId)
+      if (this.categoryChecked) {
+        let pos = this.checkedList.findIndex(category => {
+        return this.categoryChecked.id == category.id
+      });
+        console.log(pos)
+        if (pos == -1) {
+          this.checkedList.push.apply(this.checkedList,[this.categoryChecked]) //doit etre une array pas un object ! 
+          console.log(this.checkedList);
+          console.log(this.categoryChecked);
+        } else {
+          this.checkedList.splice(pos, 1)
+          console.log(this.checkedList)
+        }
+      }
+    })
   }
+
+  addSousCategoryChecked(id){
+    let found=false;
+    for (let j=0;j<this.sousCategoryCheckedList.length;j++) {
+      if (id == this.sousCategoryCheckedList[j]) {
+        this.sousCategoryCheckedList.splice(j,1);
+        found=true;
+        break;
+      }
+    }
+    if (!found) {
+      this.sousCategoryCheckedList.push(id);
+      this.sousCategoryFilter = this.sousCategoryCheckedList; // Permet de checker booleen actived or not
+      
+    }
+    let url = "";
+    this.sousCategoryFilter.forEach(function (actorId) {
+      url += actorId + "-";
+    })
+    if (this.sousCategoryFilter.length == 0) {
+      this.initialisationData('http://localhost:9090/actor')
+    } else {
+      this.initialisationData('http://localhost:9090/actor/category/' + url)
+    }
+  }
+
+  getCategoryById(data, id) {
+    return data.find(categoryObj => {
+     if (categoryObj.id === id) {
+       return categoryObj;
+     }
+     return null;
+   })
+ }
 }
