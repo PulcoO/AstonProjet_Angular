@@ -9,6 +9,6 @@ https://docs.google.com/presentation/d/18ZOG7XcrMKZcEFwOGxVSIRa_iYvCjd53XmdWhlaG
 
 ## Server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` , inside the IHM file, for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
